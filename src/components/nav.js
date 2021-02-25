@@ -5,7 +5,7 @@ import 'typeface-roboto-mono';
 
 const NavStyles = styled.nav`
     .logo {
-        font-size: 5rem;
+        font-size:5rem;
     }
 `;
 
