@@ -56,8 +56,6 @@ const GlobalStyles = createGlobalStyle`
         border-radius: 6px;
         border: 3px solid var(--dark);
     }
-
-
 `;
 
 export default GlobalStyles;
