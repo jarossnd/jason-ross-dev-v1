@@ -98,16 +98,19 @@ export default function Nav() {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/" onClick="doReset(this)">Home</Link>
+                            <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <Link to="/articles" onClick="doReset(this)">Articles</Link>
+                            <Link to="/articles">Articles</Link>
                         </li>
                         <li>
-                            <Link to="/about" onClick="doReset(this)">About</Link>
+                            <Link to="/projects">Projects</Link>
                         </li>
                         <li>
-                            <Link to="/contact" onClick="doReset(this)">Contact</Link>
+                            <Link to="/about">About</Link>
+                        </li>
+                        <li>
+                            <Link to="/contact">Contact</Link>
                         </li>
                     </ul>
                 </nav>

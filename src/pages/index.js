@@ -31,14 +31,14 @@ export default function HomePage() {
     <>
     <div className="item1">
       <h1>Welcome</h1>
-      <h2>Howdy, my name is Jason! I'm glad you are here 👍</h2>
+      <h2>Howdy, my name is Jason Ross 👋 </h2>
       <p>
       I am a technology enthusiast who enjoys web development, leadership, firearms, and fitness. Currently, I am employed at a large fortune 100 company in the United Sates. In my free time, I occasionally like to take on new side projects that pertain to my interests. Feel free to get in contact with me if you want to connect. Thanks for visiting my corner of the internet and I hope you enjoy my site. Cheers! 🍻
       </p>
     </div>
     <div className="item2" />
       <div className="item3">
-        <h3>Twitter</h3>
+        <h2>Twitter</h2>
         <StaticQuery
           query={graphql`
             query MyQuery {

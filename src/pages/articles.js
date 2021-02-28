@@ -4,6 +4,14 @@ import styled from 'styled-components';
 import Bio from '../components/bio';
 import SEO from '../components/seo';
 
+const ArticleStyles = styled.div`
+  ol {
+    padding: 0px;
+    margin: 0px;
+  }
+
+`;
+
 const PostStyles = styled.div`
   border: 3px solid var(--black);
   border-radius: 15px;
@@ -26,7 +34,6 @@ const PostStyles = styled.div`
   }
 `;
 
-
 const BlogIndex = ({ data, location }) => {
     const siteTitle = data.site.siteMetadata?.title || `Title`;
     const posts = data.allMarkdownRemark.nodes;
@@ -47,9 +54,9 @@ const BlogIndex = ({ data, location }) => {
     return (
       <div location={location} title={siteTitle} className="item2">
         <h1>Articles</h1>
-        <h2>I would rather be developing than writing but here is what I have 😁</h2>
+        <p>Here is my blog! My latest blog articles can be found below.</p>
         <SEO title="Articles" />
-  
+        <ArticleStyles>
         <ol style={{ listStyle: `none` }}>
           {posts.map((post) => {
             const title = post.frontmatter.title || post.fields.slug;
@@ -57,11 +64,11 @@ const BlogIndex = ({ data, location }) => {
               <li key={post.fields.slug}>
                 <article className="post-list-item" itemScope itemType="http://schema.org/Article">
                   <PostStyles>
-                      <h3>
+                      <h2>
                         <Link to={post.fields.slug} itemProp="url" class="post-link">
                             <span itemProp="headline">{title}</span>
                         </Link>
-                    </h3>
+                    </h2>
                     <p>Date: {post.frontmatter.date}</p>
   
                     <section>
@@ -78,6 +85,7 @@ const BlogIndex = ({ data, location }) => {
             );
           })}
         </ol>
+        </ArticleStyles>
       </div>
     );
   };
