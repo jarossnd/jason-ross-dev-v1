@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 import Bio from '../components/bio';
-import SEO from '../components/seo';
+import SEO from '../components/SEO';
 
 const ArticleStyles = styled.div`
   ol {
