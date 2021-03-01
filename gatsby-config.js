@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     author: {
       name: `Jason Ross`,
-      summary: `who lives and works in Fargo building useful things.`,
+      summary: `who lives and works in the USA, writing, troubleshooting and building useful things.`,
     },
     description: `Jason Ross Personal Blog`,
     siteUrl: `https://www.jasonross.dev`,
