@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SEO from '../components/SEO';
 
 const MyDetailsStyles = styled.div`
   border: 3px solid var(--black);
@@ -101,6 +102,7 @@ const FormContactStyles = styled.div`
 export default function ContactPage() {
     return (
       <>
+      <SEO title="Contact" />
       <div className="item1">
         <h1>Contact</h1>
         <h2>I hear you want to get in touch with me. You're at the right place!</h2>

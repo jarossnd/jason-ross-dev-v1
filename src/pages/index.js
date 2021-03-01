@@ -1,6 +1,7 @@
 import  React from "react";
 import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
+import SEO from "../components/SEO";
 
 const TwitterStyles = styled.div`
   .tweet-container {
@@ -29,6 +30,7 @@ const ArticleStyles = styled.div`
 export default function HomePage() {
   return (
     <>
+    <SEO title="Welcome" />
     <div className="item1">
       <h1>Welcome</h1>
       <h2>Howdy, my name is Jason Ross 👋 </h2>

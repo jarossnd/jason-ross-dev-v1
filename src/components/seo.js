@@ -1,84 +1,31 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
-const SEO = ({ description, lang, meta, title }) => {
-    const { site } = useStaticQuery(
-      graphql`
-        query {
-          site {
+export default function SEO({ children, location, description, title, image }) {
+    const { site } = useStaticQuery(graphql`
+    query {
+        site {
             siteMetadata {
-              title
-              description
-              social {
+                title
+                description
                 twitter
-              }
             }
-          }
         }
-      `
-    )
-  
-    const metaDescription = description || site.siteMetadata.description
-    const defaultTitle = site.siteMetadata?.title
-  
+    }
+    `);
     return (
-      <Helmet
-        htmlAttributes={{
-          lang,
-        }}
-        title={title}
-        titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-        meta={[
-          {
-            name: `description`,
-            content: metaDescription,
-          },
-          {
-            property: `og:title`,
-            content: title,
-          },
-          {
-            property: `og:description`,
-            content: metaDescription,
-          },
-          {
-            property: `og:type`,
-            content: `website`,
-          },
-          {
-            name: `twitter:card`,
-            content: `summary`,
-          },
-          {
-            name: `twitter:creator`,
-            content: site.siteMetadata?.social?.twitter || ``,
-          },
-          {
-            name: `twitter:title`,
-            content: title,
-          },
-          {
-            name: `twitter:description`,
-            content: metaDescription,
-          },
-        ].concat(meta)}
-      />
-    )
-  }
-  
-  SEO.defaultProps = {
-    lang: `en`,
-    meta: [],
-    description: ``,
-  }
-  
-  SEO.propTypes = {
-    description: PropTypes.string,
-    lang: PropTypes.string,
-    meta: PropTypes.arrayOf(PropTypes.object),
-    title: PropTypes.string.isRequired,
-  }
-  
-  export default SEO
+        <Helmet titleTemplate={`%s - ${site.siteMetadata.title}`}>
+        <html lang="en" />
+        <title>{title}</title>
+        {/* Fav Icons */}
+        <link rel="icon" type="image/svc+xml" href="/favicon.svg" />
+        <link rel="alternate icon" href="favicon.ico" />
+        {/* Meta Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="utf-8" />
+        <meta name="description" content={site.siteMetadata.description} />
+
+    </Helmet>
+    );
+}
