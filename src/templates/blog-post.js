@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
