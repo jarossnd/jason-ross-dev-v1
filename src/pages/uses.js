@@ -9,8 +9,8 @@ export default function UsesPage() {
         <h4>Hardware</h4>
         <ul>
             <li>Laptop: MacBook Pro 2018</li>
-            <li>Mouse: </li>
-            <li>Keyboard: </li>
+            <li>Mouse: Logitech G502 HERO</li>
+            <li>Keyboard: Magic Keyboard with Numeric Keypad</li>
         </ul>
         <h4>Software</h4>
         <ul>

@@ -48,7 +48,7 @@ const Bio = () => {
         <p style={{ textAlign: `center;` }}>
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>You can follow him on Twitter.</a>
+          <a href={`/donate`}>You can buy him a beer here 🍺</a>
         </p>
       )}
     </div>

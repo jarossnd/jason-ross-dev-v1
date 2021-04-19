@@ -35,8 +35,8 @@ export default function HomePage() {
       <h1>Welcome</h1>
       <h2>Howdy, my name is Jason Ross 👋 </h2>
       <p>
-      I am a technology enthusiast who enjoys web development, leadership, firearms, and fitness. Currently, I am employed at a large fortune 100 company in the United Sates. In my free time, I occasionally like to take on new side projects that pertain to my interests. Feel free to get in contact with me if you want to connect. Thanks for visiting my corner of the internet and I hope you enjoy my site. Cheers! 🍻
-      </p>
+        I create technology videos on my YouTube channel found <a href="https://www.youtube.com/channel/UCP6Y5xvu8VSyXjFHwGMgc6g">here</a>. In my freetime I enjoy web development along with minimalist software on Linux based operating systems.
+    </p>
     </div>
     <div className="item2" />
       <div className="item3">
