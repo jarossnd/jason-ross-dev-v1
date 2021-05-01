@@ -15,7 +15,7 @@ export default function UsesPage() {
         <h4>Software</h4>
         <ul>
             <li>Terminal: HyperJS</li>
-            <li>Code Editor: VSCode</li>
+            <li>Code Editor: VSCode, NeoVim</li>
         </ul>
         <h4>VSCode Extensions</h4>
         <ul>
