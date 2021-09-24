@@ -8,7 +8,7 @@ Howdy folks!
 
 Lately, I have been diving more and more into Arch Linux and using suckless minimal software. I just finished publishing a video to YouTube called [Installing Arch Linux on a UEFI System in 2021](https://youtu.be/JFMGykeBfTI). If this video I walk you through from beginning to end on how to install Arch Linux when your machine is configured to use UEFI.
 
-The other week I found an older HP laptop I had laying around that is around 5 years old. I couldn't remember the BIOS password and it was configured for UEFI. Instead of doing a password reset I decided to install Arch Linux on the laptop leaving UEFI in place. Once I successfully did that, I decided to make a video on it for others to follow.
+The other week I found an older HP laptop I had lying around that is around 5 years old. I couldn't remember the BIOS password and it was configured for UEFI. Instead of doing a password reset I decided to install Arch Linux on the laptop leaving UEFI in place. Once I successfully did that, I decided to make a video on it for others to follow.
 
 Below are the steps on how I did the install. I have also included the instructions on GitHub [here](https://github.com/jarossnd/arch-linux-uefi-grub/blob/main/install-notes.md).
 
