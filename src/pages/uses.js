@@ -9,12 +9,13 @@ export default function UsesPage() {
         <h4>Hardware</h4>
         <ul>
             <li>Laptop: MacBook Pro 2018</li>
-            <li>Mouse: Logitech G502 HERO</li>
-            <li>Keyboard: Magic Keyboard with Numeric Keypad</li>
+            <li>Laptop 2: Surface Book 2</li>
+            <li>Mouse: Logitech MX Master</li>
+            <li>Keyboard: Logitech MX Keys</li>
         </ul>
         <h4>Software</h4>
         <ul>
-            <li>Terminal: HyperJS</li>
+            <li>Terminal: HyperJS (on Mac OS) and Windows Terminal</li>
             <li>Code Editor: VSCode, NeoVim</li>
         </ul>
         <h4>VSCode Extensions</h4>

@@ -33,9 +33,9 @@ export default function HomePage() {
     <SEO title="Welcome" />
     <div className="item1">
       <h1>Welcome</h1>
-      <h2>Howdy, my name is Jason Ross 👋 </h2>
+      <h2>Hello, my name is Jason Ross 👋 </h2>
       <p>
-        I create technology videos on my YouTube channel found <a href="https://www.youtube.com/channel/UCP6Y5xvu8VSyXjFHwGMgc6g">here</a>. In my freetime I enjoy web development along with minimalist software on Linux based operating systems.
+        I create technology videos on my YouTube channel found <a href="https://www.youtube.com/channel/UCP6Y5xvu8VSyXjFHwGMgc6g">here</a>. You will find me creating content around Linux, MacOS, Windows, scripting, SharePoint and more. 
     </p>
     </div>
     <div className="item2" />

@@ -15,7 +15,7 @@ export default function Footer() {
     return <FooterStyles>
         <footer>
             <p>Copyright &copy; {new Date().getFullYear()} Jason Ross</p>
-            <p class="footerSmall">Made by Jason Ross with coolness 😎 using GatsbyJS and Netlify.</p>
+            <p class="footerSmall">Made by Jason Ross with coolness 😎 using GatsbyJS and Netlify. All views and options are my own.</p>
         </footer>
     </FooterStyles>
 }
