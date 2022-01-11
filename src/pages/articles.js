@@ -109,6 +109,7 @@ const BlogIndex = ({ data, location }) => {
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }
