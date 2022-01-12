@@ -1,6 +1,6 @@
 ---
 title: Installing the SharePoint Online Management Shell in 2022
-date: "2022-01-11T00:00:00.000Z"
+date: "2022-01-12T00:00:00.000Z"
 description: "I walk you through installing the SharePoint Online Management Shell and connecting to your SharePoint Online Tenant"
 tags: ['sharepoint', 'powershell']
 ---
@@ -45,14 +45,22 @@ You can find a list of cmdlets on the [Microsoft Docs cmdlet reference](https://
 
 ## Connecting to your tenant
 
+Use the `Connect-SPOService` cmdlet to connect to your tenant. Also, you must connect to the `-admin` SharePoint Online Admin URL. See below for an example:
+
 `Connect-SPOService -Url https://<YOURTENANT>-admin.sharepoint.com`
 
 
 ## Logging into a Government GCC High or DoD tenant
 
+Use the `Connect-SPOService` cmdlet to connect to your government tenant. Also, you must connect to the `-admin` SharePoint Online Admin URL. Use  `-Region ITAR` to indicate that you want to login with a Government endpoint. See below for an example:
+
 `Connect-SPOService -Url https://<YOURTENANT>-admin.sharepoint.us -Region ITAR`
 
 ## Issues 🤯
+
+### Syntax Errors
+
+If you are getting a bunch of red text when trying to run a cmdlet, the first thing is to check for syntax errors and typos. Often times what I will see is someone copied a cmdlet from a web page and pasted it into the PowerShell window. A hidden character or bullet point from the web page will cause the cmdlet not to be found or give an invalid parameter name and it will fail. If you are copying cmdlets from the internet, sterilize the cmdlet by pasting and recopying in Notepad first (or similar method) then try to run the command again.
 
 ### Outdated version
 

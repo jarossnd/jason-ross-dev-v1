@@ -31,9 +31,9 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
         <footer>
-        <p>
+        <p style={{ textAlign: `center;` }}>
             🐛 Found a typo or something that needs to be corrected? <a href={"https://github.com/jarossnd/jason-ross-dev/tree/main/blog/posts/" + post.fields.slug + "index.md"}>Edit on GitHub</a>
-          </p>
+        </p>
           <Bio />
 
         </footer>
