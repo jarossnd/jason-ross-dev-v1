@@ -6,6 +6,7 @@ import 'normalize.css';
 import GlobalStyles from '../styles/GlobalStyles';
 
 const ContentStyles = styled.div`
+
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
@@ -58,6 +59,29 @@ const ContentStyles = styled.div`
     p {
         font-size: 3rem;
     }
+
+    @media screen and (max-width: 760px) {
+        h1 {
+        font-size: 4rem;
+        color: var(--yellow);
+        text-align: center;
+    }
+    h2 {
+        font-size: 3rem;
+        color: var(--white);
+        text-align: center;
+    }
+    h3 {
+        font-size: 2rem;
+        color: var(--white);
+        text-align: center;
+    }
+    p {
+        font-size: 2rem;
+    }
+
+}
+
 `;
 
 export default function Layout({ children }) {

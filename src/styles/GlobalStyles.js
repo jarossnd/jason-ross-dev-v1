@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     html {
-        font-size: 10px;
+        font-size: 8px;
         background-color: var(--blue);
     }
 

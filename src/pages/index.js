@@ -13,18 +13,18 @@ const TwitterStyles = styled.div`
     padding: 20px;
     background-color: var(--blue);
   }
-`;
 
-const ArticleStyles = styled.div`
-  .tweet-container {
+  @media screen and (max-width: 760px) {
+    .tweet-container {
     border: 3px solid var(--black);
     border-radius: 15px;
-    font-size: 3rem;
+    font-size: 2rem;
     text-decoration: none;
-    margin-bottom: 20px;
-    padding: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
     background-color: var(--blue);
   }
+}
 `;
 
 export default function HomePage() {
@@ -32,7 +32,7 @@ export default function HomePage() {
     <>
     <SEO title="Welcome" />
     <div className="item1">
-      <h1>Welcome</h1>
+    <h1>Welcome</h1>
       <h2>Hello, my name is Jason Ross 👋 </h2>
       <p>
         I create technology videos on my YouTube channel found <a href="https://www.youtube.com/channel/UCP6Y5xvu8VSyXjFHwGMgc6g">here</a>. You will find me creating content around Linux, MacOS, Windows, scripting, SharePoint and more. 
@@ -77,7 +77,7 @@ export default function HomePage() {
                     <a
                       target="_blank"
                       rel="noreferrer"
-                      href={`https://twitter.com/jaross/status/${item.node.id_str}`}
+                      href={`https://twitter.com/jarossnd/status/${item.node.id_str}`}
                       style={{ textDecoration: 'none', color: 'var(--yellow)' }}
                     >
                       {item.node.full_text}
