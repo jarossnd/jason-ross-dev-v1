@@ -62,22 +62,22 @@ const ContentStyles = styled.div`
 
     @media screen and (max-width: 760px) {
         h1 {
-        font-size: 3rem;
+        font-size: 4rem;
         color: var(--yellow);
         text-align: center;
     }
     h2 {
-        font-size: 2rem;
+        font-size: 3rem;
         color: var(--white);
         text-align: center;
     }
     h3 {
-        font-size: 1rem;
+        font-size: 2rem;
         color: var(--white);
         text-align: center;
     }
     p {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
 }

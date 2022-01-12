@@ -77,7 +77,7 @@ export default function HomePage() {
                     <a
                       target="_blank"
                       rel="noreferrer"
-                      href={`https://twitter.com/jaross/status/${item.node.id_str}`}
+                      href={`https://twitter.com/jarossnd/status/${item.node.id_str}`}
                       style={{ textDecoration: 'none', color: 'var(--yellow)' }}
                     >
                       {item.node.full_text}

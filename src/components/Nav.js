@@ -14,6 +14,7 @@ const NavStyles = styled.nav`
     .logo {
         grid-area: logo;
         padding: 10px 20px;
+        font-size: 3rem;
     }
 
     .menu {
@@ -35,9 +36,10 @@ const NavStyles = styled.nav`
         padding: 0px 10px 0px 10px;
     }
 
-
-    @media screen and (max-width: 1346px) {
+    li a {
+        font-size: 3rem;
     }
+
     @media screen and (max-width: 760px) {
         max-width: 760px;
         grid-template-areas:
@@ -61,7 +63,7 @@ const NavStyles = styled.nav`
             text-align: center;
         }
         li a {
-            font-size: 1rem
+            font-size: 2rem
         }
         .logo {
             grid-area: logo;
@@ -70,10 +72,6 @@ const NavStyles = styled.nav`
 
 }
 
-
-
-
-    }
 `;
 
 export default function Nav() {
