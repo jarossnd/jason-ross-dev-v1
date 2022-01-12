@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Bio from '../components/bio';
 import SEO from '../components/SEO';
 
-const ArticleStyles = styled.div`
+const BlogStyles = styled.div`
   ol {
     padding: 0px;
     margin: 0px;
@@ -53,10 +53,10 @@ const BlogIndex = ({ data, location }) => {
   
     return (
       <div location={location} title={siteTitle} className="item2">
-        <h1>Articles</h1>
-        <p>Here is my blog! My latest blog articles can be found below.</p>
-        <SEO title="Articles" />
-        <ArticleStyles>
+        <h1>Posts</h1>
+        <p>Here is my blog! My latest blog posts can be found below. If you want to view my posts on a specific topic, please see <Link to="/tags">tags</Link>.</p>
+        <SEO title="Posts" />
+        <BlogStyles>
         <ol style={{ listStyle: `none` }}>
           {posts.map((post) => {
             const title = post.frontmatter.title || post.fields.slug;
@@ -70,7 +70,7 @@ const BlogIndex = ({ data, location }) => {
                         </Link>
                     </h2>
                     <p>Date: {post.frontmatter.date}</p>
-  
+ 
                     <section>
                       <p
                         dangerouslySetInnerHTML={{
@@ -85,7 +85,7 @@ const BlogIndex = ({ data, location }) => {
             );
           })}
         </ol>
-        </ArticleStyles>
+        </BlogStyles>
       </div>
     );
   };

@@ -1,5 +1,12 @@
-import React from 'react';
+import React from 'react'
 
 export default function FourOhFourPage() {
-  return <p>Hey - That page doesn't exist</p>;
+  return (
+    <>
+    <div className="item1">
+    <h1>Uhhohh - 404 🙁</h1>
+    <p>Hey there....this page does not exist!</p>
+    </div>
+    </>
+  )
 }

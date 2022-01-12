@@ -1,8 +1,9 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import Bio from "../components/bio";
+import SEO from "../components/SEO";
 
-import Bio from "../components/bio"
-import SEO from "../components/SEO"
+const editURL = `https://github.com/jarossnd/jason-ross-dev/tree/master/src/`;
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -22,7 +23,7 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <p>Post Date: {post.frontmatter.date}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -30,7 +31,11 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
         <footer>
+        <p>
+            🐛 Found a typo or something that needs to be corrected? <a href={"https://github.com/jarossnd/jason-ross-dev/tree/main/blog/posts/" + post.fields.slug + "index.md"}>Edit on GitHub</a>
+          </p>
           <Bio />
+
         </footer>
       </article>
       <nav className="blog-post-nav">
@@ -43,6 +48,8 @@ const BlogPostTemplate = ({ data, location }) => {
             padding: 0,
           }}
         >
+
+
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
@@ -84,6 +91,10 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
+      }
+      fields {
+        slug
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
