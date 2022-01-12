@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     author: {
@@ -64,10 +67,9 @@ module.exports = {
           // consumer_key: process.env.TWITTER_CONSUMER_KEY,
           // consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
           // bearer_token: process.env.TWITTER_BREARER_TOKEN,
-          consumer_key: 'EBC2b2GqhFJJOr6QjBkZ22F5q',
-          consumer_secret: 'jCsV1hMIuk0ljeRvpzBp8z8pN5My5EgEFBEK2kj2nK7IKqtYa3',
-          bearer_token:
-            'AAAAAAAAAAAAAAAAAAAAAJq5JAEAAAAAHCXpjUokJkgidOesYPLFJ8ChFKg%3DJasmpDQ6luG38QnJYv6jaOqNvp7422KMLW2PRdrzPqPbScwBMN',
+          consumer_key: process.env.CONSUMER_KEY,
+          consumer_secret: process.env.CONSUMER_SECRET,
+          bearer_token: process.env.BEARER_TOKEN,
         },
         queries: {
           getPosts: {

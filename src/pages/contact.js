@@ -105,7 +105,6 @@ export default function ContactPage() {
       <SEO title="Contact" />
       <div className="item1">
         <h1>Contact</h1>
-        <h2>I hear you want to get in touch with me. You're at the right place!</h2>
         <p>
         Feel free to reach out to me regarding any questions or projects. My preferred contact method is e-mail by using the contact form below. However, you can also get in touch with me on the following platforms below.
         </p>
@@ -115,8 +114,7 @@ export default function ContactPage() {
       <MyDetailsStyles>
           <h3>My Details</h3>
           <p>Twitter: @jarossnd</p>
-          <p>Facebook: What is Facebook?</p>
-          <p>Github: @jarossnd</p>
+          <p>GitHub: @jarossnd</p>
           <p>Code Pen: @jarossnd</p>
           <p>Email: Use the contact form on this page</p>
         </MyDetailsStyles>

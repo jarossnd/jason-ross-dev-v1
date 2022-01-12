@@ -44,7 +44,7 @@ const BlogIndex = ({ data, location }) => {
           <SEO title="All posts" />
   
           <p>
-            No blog posts found. Add markdown posts to "content/blog" (or the directory you specified for the
+            No posts found. Add markdown posts to "content/blog" (or the directory you specified for the
             "gatsby-source-filesystem" plugin in gatsby-config.js).
           </p>
         </Layout>
@@ -54,7 +54,7 @@ const BlogIndex = ({ data, location }) => {
     return (
       <div location={location} title={siteTitle} className="item2">
         <h1>Posts</h1>
-        <p>Here is my blog! My latest blog posts can be found below. If you want to view my posts on a specific topic, please see <Link to="/tags">tags</Link>.</p>
+        <p>My latest articles can be found below. If you want to view posts related to a specific topic, please see <Link to="/tags">tags</Link>.</p>
         <SEO title="Posts" />
         <BlogStyles>
         <ol style={{ listStyle: `none` }}>
