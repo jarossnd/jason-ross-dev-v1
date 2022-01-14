@@ -54,9 +54,12 @@ const ContentStyles = styled.div`
     h3 {
         font-size: 3rem;
         color: var(--white);
-        text-align: center;
     }
     p {
+        font-size: 3rem;
+    }
+
+    ul li {
         font-size: 3rem;
     }
 

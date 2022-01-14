@@ -5,20 +5,20 @@ export default function UsesPage() {
       <>
       <div className="item1">
         <h1>Uses</h1>
-        <h2>Here is a list of hardware and software I use</h2>
-        <h4>Hardware</h4>
+        <p>I often get asked what type of hardware or software I use and I keep track of it all on this page. I change this up often so check back for regular updates.</p>
+        <h2>Hardware</h2>
         <ul>
             <li>Laptop: MacBook Pro 2018</li>
             <li>Laptop 2: Surface Book 2</li>
             <li>Mouse: Logitech MX Master</li>
             <li>Keyboard: Logitech MX Keys</li>
         </ul>
-        <h4>Software</h4>
+        <h2>Software</h2>
         <ul>
             <li>Terminal: HyperJS (on Mac OS) and Windows Terminal</li>
             <li>Code Editor: VSCode, NeoVim</li>
         </ul>
-        <h4>VSCode Extensions</h4>
+        <h2>VSCode Extensions</h2>
         <ul>
           <li>Auto Rename Tag</li>
           <li>C/C++</li>
