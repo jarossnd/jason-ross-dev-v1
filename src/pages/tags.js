@@ -5,6 +5,8 @@ import kebabCase from "lodash/kebabCase"
 // Components
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
+import SEO from '../components/SEO';
+
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },

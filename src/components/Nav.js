@@ -4,73 +4,148 @@ import styled from 'styled-components';
 import 'typeface-roboto-mono';
 
 const NavStyles = styled.nav`
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-areas: 'logo menu';
 
-    .logo {
-        grid-area: logo;
-        padding: 10px 20px;
+    .top-nav {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1400px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--blue);
+        background: var(--blue);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: var(--yellow);
+        height: 50px;
+        padding: 1em;
         font-size: 3rem;
     }
 
+    
     .menu {
-        grid-area: menu;
-        padding: 10px 20px;
-        
-    }
-
-    .menu ul {
+        display: flex;
+        flex-direction: row;
         list-style-type: none;
         margin: 0;
         padding: 0;
-        float: right;
-        text-align: center;
-    }
+      }
+      
+      .menu > li {
+        margin: 0 1rem;
+      }
+      
+      .menu-button-container {
+        display: none;
+        height: 100%;
+        width: 30px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      #mobileMenuCheckbox {
+        display: none;
+      }
+      
+      .menu-button,
+      .menu-button::before,
+      .menu-button::after {
+        display: block;
+        background-color: var(--yellow);
+        position: absolute;
+        height: 4px;
+        width: 30px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+      }
+      
+      .menu-button::before {
+        content: '';
+        margin-top: -8px;
+      }
+      
+      .menu-button::after {
+        content: '';
+        margin-top: 8px;
+      }
+      
+      #mobileMenuCheckbox:checked + .menu-button-container .menu-button::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+      }
+      
+      #mobileMenuCheckbox:checked + .menu-button-container .menu-button {
+        background: rgba(255, 255, 255, 0);
+      }
+      
+      #mobileMenuCheckbox:checked + .menu-button-container .menu-button::after {
+        margin-top: 0px;
+        transform: rotate(-405deg);
+      }
 
-    .menu li {
-        display: inline;
-        padding: 0px 10px 0px 10px;
-    }
-
-    li a {
-        font-size: 3rem;
-    }
 
     @media screen and (max-width: 760px) {
-        max-width: 760px;
-        grid-template-areas:
-        'logo'
-        'menu';
-
-        grid-template-columns: 1fr;
-
-        .menu {
-            grid-area: menu;
-            margin: 0;
-            text-align: center;
-        }
-
-        ul {
+        .menu-button-container {
+            display: flex;
+          }
+          .menu {
+            position: absolute;
+            top: 0;
+            margin-top: 82px;
+            left: 0;
+            flex-direction: column;
             width: 100%;
-            text-align: center;
-        }
+            justify-content: center;
+            align-items: center;
+          }
+          .menu a {
+            color: var(--yellow);
+            visibility: hidden;
+          }
 
-        li {
-            text-align: center;
-        }
-        li a {
-            font-size: 2rem
-        }
-        .logo {
-            grid-area: logo;
-            text-align: center;
-        }
+          .menu a:hover{
+            border-bottom: 0px solid var(--yellow);
+            border-color: var(--yellow);
+            border-bottom-color: var(--yellow);
+          }
 
-}
+          .menu li:hover {
+              background-color: var(--dark);
+          }
+
+          #mobileMenuCheckbox ~ .menu li {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+          }
+          #mobileMenuCheckbox:checked ~ .menu li {
+            border: 1px solid #333;
+            height: 1.5em;
+            padding: 1.5em;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            visibility: visible;
+          }
+          #mobileMenuCheckbox:checked ~ .menu a {
+            color: var(--yellow);
+            visibility: visible;
+          }
+          .menu > li {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0.5em 0;
+            width: 100%;
+            color: white;
+            background-color: var(--blue);
+          }
+          .menu > li:not(:last-child) {
+            border-bottom: 1px solid #444;
+          }
+    }
 
 `;
 
@@ -78,26 +153,32 @@ export default function Nav() {
     return (
         <div>
             <NavStyles>
-                <div className="logo">
-                    <Link to="/">&lt;JR /&gt;</Link>
-                </div>
-                <div className="menu">
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/posts">Posts</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul>
-                </div>
+                <section className="top-nav">
+                    <div>
+                        <Link to="/">&lt;JR /&gt;</Link>
+                    </div>
+                    <input id="mobileMenuCheckbox" type="checkbox" />
+     
+                    <label className='menu-button-container' htmlFor="mobileMenuCheckbox">
+                        <div className='menu-button'></div>
+                    </label>
+                    <ul className="menu">
+                        <li>
+                            <Link to="/" onClick={() => { this.setState({ checked: false, }) }} >Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/posts" onClick={() => { this.setState({ checked: false, }) }} >Posts</Link>
+                        </li>
+                        <li>
+                            <Link to="/about" onClick={() => { this.setState({ checked: false, }) }} >About</Link>
+                        </li>
+                        <li>
+                            <Link to="/contact" onClick={() => { this.setState({ checked: false, }) }} >Contact</Link>
+                        </li>
+                    </ul>
+                </section>
             </NavStyles>
         </div>
     );
 }
+

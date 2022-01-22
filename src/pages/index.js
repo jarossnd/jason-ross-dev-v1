@@ -30,7 +30,7 @@ const TwitterStyles = styled.div`
 export default function HomePage() {
   return (
     <>
-    <SEO title="Welcome" />
+    <SEO title="Technology Enthusiast" />
     <div className="item1">
     <h1>Welcome</h1>
       <h2>Hello, my name is Jason 👋 </h2>
