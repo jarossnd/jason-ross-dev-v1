@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react'
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import 'typeface-roboto-mono';
 
-const NavStyles = styled.nav`
 
+const NavStyles = styled.nav`
     .top-nav {
         margin-left: auto;
         margin-right: auto;
@@ -21,7 +21,6 @@ const NavStyles = styled.nav`
         padding: 1em;
         font-size: 3rem;
     }
-
     
     .menu {
         display: flex;
@@ -84,8 +83,6 @@ const NavStyles = styled.nav`
         margin-top: 0px;
         transform: rotate(-405deg);
       }
-
-
     @media screen and (max-width: 760px) {
         .menu-button-container {
             display: flex;
@@ -104,17 +101,14 @@ const NavStyles = styled.nav`
             color: var(--yellow);
             visibility: hidden;
           }
-
           .menu a:hover{
             border-bottom: 0px solid var(--yellow);
             border-color: var(--yellow);
             border-bottom-color: var(--yellow);
           }
-
           .menu li:hover {
               background-color: var(--dark);
           }
-
           #mobileMenuCheckbox ~ .menu li {
             height: 0;
             margin: 0;
@@ -146,10 +140,15 @@ const NavStyles = styled.nav`
             border-bottom: 1px solid #444;
           }
     }
-
 `;
 
-export default function Nav() {
+class Nav extends Component {
+  state = {
+    scrolledClass: 'notFixed',
+    checked: false,
+  }
+render() {
+    const { checked } = this.state
     return (
         <div>
             <NavStyles>
@@ -157,28 +156,38 @@ export default function Nav() {
                     <div>
                         <Link to="/">&lt;JR /&gt;</Link>
                     </div>
-                    <input id="mobileMenuCheckbox" type="checkbox" />
+                    <input id="mobileMenuCheckbox" type="checkbox" checked={checked} />
      
-                    <label className='menu-button-container' htmlFor="mobileMenuCheckbox">
+                    <label
+                    className="menu-button-container"
+                    htmlFor="mobileMenuCheckbox"
+                    onClick={() => {
+                      this.setState({
+                        checked: !checked,
+                      })
+                    }}
+                  >
                         <div className='menu-button'></div>
                     </label>
                     <ul className="menu">
                         <li>
-                            <Link to="/" onClick={() => { this.setState({ checked: false, }) }} >Home</Link>
+                            <Link to="/" onClick={() => {this.setState({checked: false,})}}>Home</Link>
                         </li>
                         <li>
-                            <Link to="/posts" onClick={() => { this.setState({ checked: false, }) }} >Posts</Link>
+                            <Link to="/posts" onClick={() => {this.setState({checked: false,})}}>Posts</Link>
                         </li>
                         <li>
-                            <Link to="/about" onClick={() => { this.setState({ checked: false, }) }} >About</Link>
+                            <Link to="/about" onClick={() => {this.setState({checked: false,})}}>About</Link>
                         </li>
                         <li>
-                            <Link to="/contact" onClick={() => { this.setState({ checked: false, }) }} >Contact</Link>
+                            <Link to="/contact" onClick={() => {this.setState({checked: false,})}}>Contact</Link>
                         </li>
                     </ul>
                 </section>
             </NavStyles>
         </div>
-    );
+    )
+}
 }
 
+export default Nav
