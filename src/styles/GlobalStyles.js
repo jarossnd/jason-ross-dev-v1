@@ -57,6 +57,11 @@ const GlobalStyles = createGlobalStyle`
         border-radius: 6px;
         border: 3px solid var(--dark);
     }
+    @media screen and (max-width: 760px) {
+        body {
+            padding-right: 10px;
+            padding-left: 10px;
+    }
 `;
 
 export default GlobalStyles;

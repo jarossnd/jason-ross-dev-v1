@@ -84,13 +84,16 @@ const NavStyles = styled.nav`
         transform: rotate(-405deg);
       }
     @media screen and (max-width: 760px) {
+      .top-nav {
+        height: 25px;
+      }
         .menu-button-container {
             display: flex;
           }
           .menu {
             position: absolute;
             top: 0;
-            margin-top: 82px;
+            margin-top: 57px;
             left: 0;
             flex-direction: column;
             width: 100%;
@@ -118,8 +121,8 @@ const NavStyles = styled.nav`
           }
           #mobileMenuCheckbox:checked ~ .menu li {
             border: 1px solid #333;
-            height: 1.5em;
-            padding: 1.5em;
+            height: 1.0em;
+            padding: 1.0em;
             transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
             visibility: visible;
           }
@@ -175,6 +178,9 @@ render() {
                         </li>
                         <li>
                             <Link to="/posts" onClick={() => {this.setState({checked: false,})}}>Posts</Link>
+                        </li>
+                        <li>
+                            <Link to="/uses" onClick={() => {this.setState({checked: false,})}}>Uses</Link>
                         </li>
                         <li>
                             <Link to="/about" onClick={() => {this.setState({checked: false,})}}>About</Link>

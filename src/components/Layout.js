@@ -83,7 +83,10 @@ const ContentStyles = styled.div`
         font-size: 2rem;
     }
 
-}
+    @media screen and (max-width: 760px) {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
 
 `;
 
