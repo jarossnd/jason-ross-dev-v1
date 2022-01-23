@@ -81,6 +81,11 @@ const ContentStyles = styled.div`
     }
     p {
         font-size: 2rem;
+        line-height: 1.5;
+    }
+
+    ul li {
+        font-size: 2rem;
     }
 
     @media screen and (max-width: 760px) {

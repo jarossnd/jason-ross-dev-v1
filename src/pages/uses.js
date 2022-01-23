@@ -35,6 +35,7 @@ export default function UsesPage() {
         <h2>Other</h2>
         <ul>
           <li>☕ Coffee: Folgers</li>
+          <li>📔 Notebook: Moleskine</li>
           <li>🛻 Vehicle: RAM 1500 Pickup</li>
           <li>🧻 Toiletpaper: Hey now, that is a weird question!</li>
         </ul>
