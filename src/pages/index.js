@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
-import SEO from "../components/SEO";
+import SEO from '../components/SEO';
 
 const TwitterStyles = styled.div`
   .tweet-container {
@@ -16,31 +16,34 @@ const TwitterStyles = styled.div`
 
   @media screen and (max-width: 760px) {
     .tweet-container {
-    border: 3px solid var(--black);
-    border-radius: 15px;
-    font-size: 2rem;
-    text-decoration: none;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: var(--blue);
+      border: 3px solid var(--black);
+      border-radius: 15px;
+      font-size: 2rem;
+      text-decoration: none;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: var(--blue);
+    }
   }
-}
 `;
 
 export default function HomePage() {
   return (
     <>
-    <SEO title="Technology Enthusiast" />
-    <div className="item1">
-    <h1>Welcome</h1>
-      <h2>Hello, my name is Jason 👋 </h2>
-      <p>
-        I create technology videos on my YouTube channel found <a href="https://www.youtube.com/channel/UCP6Y5xvu8VSyXjFHwGMgc6g">here</a>. You will find me creating content around Linux, MacOS, Windows, scripting, SharePoint and more. 
-    </p>
-
-
-    </div>
-    <div className="item2" />
+      <SEO title="Technology Enthusiast" />
+      <div className="item1">
+        <h1>Welcome</h1>
+        <h2>Hello, my name is Jason 👋 </h2>
+        <p>
+          I create technology videos on my YouTube channel found{' '}
+          <a href="https://www.youtube.com/channel/UCP6Y5xvu8VSyXjFHwGMgc6g">
+            here
+          </a>
+          . You will find me creating content around Linux, MacOS, Windows,
+          scripting, SharePoint and more.
+        </p>
+      </div>
+      <div className="item2" />
       <div className="item3">
         <h2>Twitter</h2>
         <StaticQuery
@@ -56,7 +59,9 @@ export default function HomePage() {
                   }
                 }
               }
-              allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+              allMarkdownRemark(
+                sort: { fields: [frontmatter___date], order: DESC }
+              ) {
                 nodes {
                   excerpt
                   fields {
@@ -74,42 +79,50 @@ export default function HomePage() {
           render={(data) => (
             <TwitterStyles>
               <div>
-                {data.allTwitterStatusesUserTimelineGetPosts.edges.map((item, i) => (
-                  <div key={i} className="tweet-container">
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href={`https://twitter.com/jarossnd/status/${item.node.id_str}`}
-                      style={{ textDecoration: 'none', color: 'var(--yellow)' }}
-                    >
-                      {item.node.full_text}
-                    </a>
-                    <div
-                      style={{
-                        textAlign: 'center',
-                      }}
-                    >
+                {data.allTwitterStatusesUserTimelineGetPosts.edges.map(
+                  (item, i) => (
+                    <div key={i} className="tweet-container">
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={`https://twitter.com/jarossnd/status/${item.node.id_str}`}
+                        style={{
+                          textDecoration: 'none',
+                          color: 'var(--yellow)',
+                        }}
+                      >
+                        {item.node.full_text}
+                      </a>
                       <div
                         style={{
                           textAlign: 'center',
                         }}
                       >
-                        {item.node.created_at} | {item.node.favorite_count}
-                        <span style={{ marginRight: '5px', color: 'Red' }}> ♥️</span>
+                        <div
+                          style={{
+                            textAlign: 'center',
+                          }}
+                        >
+                          {item.node.created_at} | {item.node.favorite_count}
+                          <span style={{ marginRight: '5px', color: 'Red' }}>
+                            {' '}
+                            ♥️
+                          </span>
+                        </div>
+                        <div
+                          style={{
+                            textAlign: 'center',
+                          }}
+                        />
                       </div>
-                      <div
-                        style={{
-                          textAlign: 'center',
-                        }}
-                      />
                     </div>
-                  </div>
-                ))}
+                  )
+                )}
               </div>
             </TwitterStyles>
           )}
         />
       </div>
     </>
-  )
+  );
 }

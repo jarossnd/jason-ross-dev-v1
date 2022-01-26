@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
-import Bio from '../components/bio';
 import SEO from '../components/SEO';
 
 const BlogStyles = styled.div`
@@ -9,7 +8,6 @@ const BlogStyles = styled.div`
     padding: 0px;
     margin: 0px;
   }
-
 `;
 
 const PostStyles = styled.div`
@@ -35,42 +33,54 @@ const PostStyles = styled.div`
 `;
 
 const BlogIndex = ({ data, location }) => {
-    const siteTitle = data.site.siteMetadata?.title || `Title`;
-    const posts = data.allMarkdownRemark.nodes;
-  
-    if (posts.length === 0) {
-      return (
-        <Layout location={location} title={siteTitle}>
-          <SEO title="All posts" />
-  
-          <p>
-            No posts found. Add markdown posts to "content/blog" (or the directory you specified for the
-            "gatsby-source-filesystem" plugin in gatsby-config.js).
-          </p>
-        </Layout>
-      );
-    }
-  
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const posts = data.allMarkdownRemark.nodes;
+
+  if (posts.length === 0) {
     return (
-      <div location={location} title={siteTitle} className="item2">
-        <h1>Posts</h1>
-        <p>My latest articles can be found below. If you want to view posts related to a specific topic, please see <Link to="/tags">tags</Link>.</p>
-        <SEO title="Posts" />
-        <BlogStyles>
+      <Layout location={location} title={siteTitle}>
+        <SEO title="All posts" />
+
+        <p>
+          No posts found. Add markdown posts to "content/blog" (or the directory
+          you specified for the "gatsby-source-filesystem" plugin in
+          gatsby-config.js).
+        </p>
+      </Layout>
+    );
+  }
+
+  return (
+    <div location={location} title={siteTitle} className="item2">
+      <h1>Posts</h1>
+      <p>
+        My latest articles can be found below. If you want to view posts related
+        to a specific topic, please see <Link to="/tags">tags</Link>.
+      </p>
+      <SEO title="Posts" />
+      <BlogStyles>
         <ol style={{ listStyle: `none` }}>
           {posts.map((post) => {
             const title = post.frontmatter.title || post.fields.slug;
             return (
               <li key={post.fields.slug}>
-                <article className="post-list-item" itemScope itemType="http://schema.org/Article">
+                <article
+                  className="post-list-item"
+                  itemScope
+                  itemType="http://schema.org/Article"
+                >
                   <PostStyles>
-                      <h2>
-                        <Link to={post.fields.slug} itemProp="url" class="post-link">
-                            <span itemProp="headline">{title}</span>
-                        </Link>
+                    <h2>
+                      <Link
+                        to={post.fields.slug}
+                        itemProp="url"
+                        class="post-link"
+                      >
+                        <span itemProp="headline">{title}</span>
+                      </Link>
                     </h2>
                     <p>Date: {post.frontmatter.date}</p>
- 
+
                     <section>
                       <p
                         dangerouslySetInnerHTML={{
@@ -85,33 +95,33 @@ const BlogIndex = ({ data, location }) => {
             );
           })}
         </ol>
-        </BlogStyles>
-      </div>
-    );
-  };
-  
-  export default BlogIndex;
-  
-  export const pageQuery = graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
+      </BlogStyles>
+    </div>
+  );
+};
+
+export default BlogIndex;
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
       }
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-        nodes {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-            tags
-          }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+          tags
         }
       }
     }
-  `;
+  }
+`;

@@ -1,17 +1,17 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
-import Bio from "../components/bio";
-import SEO from "../components/SEO";
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Bio from '../components/bio';
+import SEO from '../components/SEO';
 
 const editURL = `https://github.com/jarossnd/jason-ross-dev/tree/master/src/`;
 
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const { previous, next } = data;
 
   return (
-    <div location={location} title={siteTitle} class={'item2'}>
+    <div location={location} title={siteTitle} className="item2">
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -31,11 +31,15 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
         <footer>
-        <p style={{ textAlign: `center;` }}>
-            🐛 Found a typo or something that needs to be corrected? <a href={"https://github.com/jarossnd/jason-ross-dev/tree/main/blog/posts/" + post.fields.slug + "index.md"}>Edit on GitHub</a>
-        </p>
+          <p style={{ textAlign: `center;` }}>
+            🐛 Found a typo or something that needs to be corrected?{' '}
+            <a
+              href={`https://github.com/jarossnd/jason-ross-dev/tree/main/blog/posts/${post.fields.slug}index.md`}
+            >
+              Edit on GitHub
+            </a>
+          </p>
           <Bio />
-
         </footer>
       </article>
       <nav className="blog-post-nav">
@@ -48,8 +52,6 @@ const BlogPostTemplate = ({ data, location }) => {
             padding: 0,
           }}
         >
-
-
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
@@ -67,10 +69,10 @@ const BlogPostTemplate = ({ data, location }) => {
         </ul>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
@@ -114,4 +116,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

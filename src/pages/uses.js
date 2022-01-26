@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import SEO from '../components/SEO';
 
 export default function UsesPage() {
   return (
     <>
-    <SEO title="Uses" />
+      <SEO title="Uses" />
       <div className="item1">
         <h1>Uses</h1>
         <p>
@@ -14,7 +14,9 @@ export default function UsesPage() {
         </p>
         <h2>Hardware</h2>
         <ul>
-          <li>💻 Laptop: I switch between a MacBook Pro 2018 and a Surface Book 2</li>
+          <li>
+            💻 Laptop: I switch between a MacBook Pro 2018 and a Surface Book 2
+          </li>
           <li>🖥️ Monitor: LG 34" and HP 25"</li>
           <li>🖱️ Mouse: Logitech MX Master and Logitech G502 HERO</li>
           <li>⌨️ Keyboard: Logitech MX Keys</li>

@@ -100,18 +100,21 @@ const FormContactStyles = styled.div`
 `;
 
 export default function ContactPage() {
-    return (
-      <>
+  return (
+    <>
       <SEO title="Contact" />
       <div className="item1">
         <h1>Contact</h1>
         <p>
-        Feel free to reach out to me regarding any questions or projects. My preferred contact method is e-mail by using the contact form below. However, you can also get in touch with me on the following platforms below.
+          Feel free to reach out to me regarding any questions or projects. My
+          preferred contact method is e-mail by using the contact form below.
+          However, you can also get in touch with me on the following platforms
+          below.
         </p>
       </div>
       <div className="item2" />
       <div className="item3">
-      <MyDetailsStyles>
+        <MyDetailsStyles>
           <h3>My Details</h3>
           <p>Twitter: @jarossnd</p>
           <p>GitHub: @jarossnd</p>
@@ -120,10 +123,15 @@ export default function ContactPage() {
         </MyDetailsStyles>
       </div>
       <div className="item4">
-      <FormContactStyles>
+        <FormContactStyles>
           <section id="contact-form">
             <h3>Contact Form</h3>
-            <form name="contactForm" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+            <form
+              name="contactForm"
+              method="POST"
+              netlify-honeypot="bot-field"
+              data-netlify="true"
+            >
               <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="contactForm" />
               <p>
@@ -141,7 +149,10 @@ export default function ContactPage() {
               <p>
                 <label>
                   <span>Message:</span>
-                  <textarea name="message" placeholder="Your message goes here" />
+                  <textarea
+                    name="message"
+                    placeholder="Your message goes here"
+                  />
                 </label>
               </p>
               <div data-netlify-recaptcha="true" />
@@ -152,6 +163,6 @@ export default function ContactPage() {
           </section>
         </FormContactStyles>
       </div>
-      </>
-      )
-    }
+    </>
+  );
+}

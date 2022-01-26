@@ -96,12 +96,12 @@ const ContentStyles = styled.div`
 `;
 
 export default function Layout({ children }) {
-    return (
-        <div>
-            <GlobalStyles />
-            <Nav />
-            <ContentStyles>{children}</ContentStyles>
-            <Footer />
-        </div>
-    );
+  return (
+    <div>
+      <GlobalStyles />
+      <Nav />
+      <ContentStyles>{children}</ContentStyles>
+      <Footer />
+    </div>
+  );
 }

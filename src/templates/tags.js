@@ -1,26 +1,26 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 // Components
-import { Link, graphql } from "gatsby"
+import { Link, graphql } from 'gatsby';
+
 const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  const { tag } = pageContext;
+  const { edges, totalCount } = data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+    totalCount === 1 ? '' : 's'
+  } tagged with "${tag}"`;
   return (
-      <>
     <div className="item1">
       <h1>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
-          const { slug } = node.fields
-          const { title } = node.frontmatter
+          const { slug } = node.fields;
+          const { title } = node.frontmatter;
           return (
             <li key={slug}>
               <Link to={slug}>{title}</Link>
             </li>
-          )
+          );
         })}
       </ul>
       {/*
@@ -29,9 +29,8 @@ const Tags = ({ pageContext, data }) => {
             */}
       <Link to="/tags">All tags</Link>
     </div>
-    </>
-  )
-}
+  );
+};
 Tags.propTypes = {
   pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired,
@@ -53,10 +52,10 @@ Tags.propTypes = {
       ),
     }),
   }),
-}
-export default Tags
+};
+export default Tags;
 export const pageQuery = graphql`
-  query($tag: String) {
+  query ($tag: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
@@ -75,4 +74,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
