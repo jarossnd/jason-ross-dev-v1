@@ -14,12 +14,14 @@ export default function UsesPage() {
         </p>
         <h2>Hardware</h2>
         <ul>
+
+          <li>🖥️ Desktop: Custom built AMD Ryzen 9 5950X 4th Gen, 64 GB RAM, with a little over 6 TB of storage</li>
           <li>
             💻 Laptop: I switch between a MacBook Pro 2018 and a Surface Book 2
           </li>
           <li>🖥️ Monitor: LG 34" and HP 25"</li>
-          <li>🖱️ Mouse: Logitech MX Master and Logitech G502 HERO</li>
-          <li>⌨️ Keyboard: Logitech MX Keys</li>
+          <li>🖱️ Mouse: Logitech - MX Master 3</li>
+          <li>⌨️ Keyboard: Logitech - G915</li>
           <li>📱 Phone: iPhone 12 Pro Max</li>
           <li>⌚ Watch: Apple Watch with GPS and Cellular</li>
         </ul>
