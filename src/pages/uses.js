@@ -15,8 +15,8 @@ export default function UsesPage() {
         <h2>Hardware</h2>
         <ul>
           <li>
-            🖥️ Desktop: Custom built AMD Ryzen 9 5950X 4th Gen, 64GB RAM, with a
-            little over 6TB of storage
+            🖥️ Desktop: Custom built AMD Ryzen 9 5950X 4th Gen, 64GB RAM, and
+            6TB of storage
           </li>
           <li>
             💻 Laptop: I switch between a MacBook Pro 2018 and a Surface Book 2

@@ -35,12 +35,16 @@ export default function HomePage() {
         <h1>Welcome</h1>
         <h2>Hello, my name is Jason 👋 </h2>
         <p>
-          I create technology videos on my YouTube channel found{' '}
+          Welcome to my website! I enjoy setting up servers, networking,
+          scripting, programming, and exploring random git repositories on sites
+          such as GitHub or GitLab. I sometimes post videos on my YouTube
+          channel found{' '}
           <a href="https://www.youtube.com/channel/UCP6Y5xvu8VSyXjFHwGMgc6g">
             here
           </a>
-          . You will find me creating content around Linux, MacOS, Windows,
-          scripting, SharePoint and more.
+          . However, I am not that good at it but plan on creating more content
+          soon. You will find me creating content around Linux, utilities,
+          servers and occasionally some off topics.
         </p>
       </div>
       <div className="item2" />
