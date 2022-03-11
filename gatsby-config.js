@@ -1,6 +1,7 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
+
 module.exports = {
   siteMetadata: {
     author: {
@@ -8,7 +9,7 @@ module.exports = {
       summary: `who creates technology videos and enjoys helping others.`,
     },
     title: `Jason Ross`,
-    description: `The homepage of web developer and technology anthusiast Jason Ross. We discuss anything having to do with technology and there are no limits!`,
+    description: `The homepage of web developer and technology anthusiast Jason Ross. We discuss everything having to do with technology and there are no limits!`,
     siteUrl: `https://www.jasonross.dev`,
     twitter: `@jarossnd`,
     social: {
@@ -16,6 +17,51 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `      
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              siteUrl
+              site_url: siteUrl
+            }
+          }
+        }`,
+        feeds: [
+          {
+            title: 'Jason Ross RSS Feed',
+            output: 'rss.xml',
+            query: `
+        {
+          allMarkdownRemark(sort: {fields: frontmatter___date, order: ASC}) {
+            nodes {
+              frontmatter {
+                title
+                date
+                description
+              }
+              html
+              fields {
+                slug
+              }
+            }
+          }
+        }
+        `,
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.nodes.map((node) => ({
+                ...node.frontmatter,
+                url: `${site.siteMetadata.siteUrl}${node.slug}`,
+                guid: `${site.siteMetadata.siteUrl}${node.slug}`,
+              })),
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -85,44 +131,44 @@ module.exports = {
         },
       },
     },
-//    `gatsby-plugin-feed`,
-//    {
-//      resolve: `gatsby-plugin-manifest`,
-//      options: {
-//        name: `Gatsby Starter Blog`,
-//        short_name: `GatsbyJS`,
-//        start_url: `/`,
-//        background_color: `#ffffff`,
-//        theme_color: `#663399`,
-//        display: `minimal-ui`,
-//        icon: `blog/assets/gatsby-icon.png`,
-//      },
-//    },
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-react-helmet",
-     {
-       resolve: 'gatsby-plugin-snipcartv3',
-       options: {
-         apiKey:
-           process.env.CONTEXT === 'production'
-             ? // Production
-               process.env.GATSBY_SNIPCART_APIKEY
-             : // Development
-               process.env.GATSBY_SNIPCART_APIKEY_PREVIEW,
-         currency: 'usd',
-         // Upgrade to latest snipcart
-         js: `https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js`,
-         styles: `https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.css`,
-       },
-     },
-    "gatsby-plugin-mdx",
+    //    `gatsby-plugin-feed`,
+    //    {
+    //      resolve: `gatsby-plugin-manifest`,
+    //      options: {
+    //        name: `Gatsby Starter Blog`,
+    //        short_name: `GatsbyJS`,
+    //        start_url: `/`,
+    //        background_color: `#ffffff`,
+    //        theme_color: `#663399`,
+    //        display: `minimal-ui`,
+    //        icon: `blog/assets/gatsby-icon.png`,
+    //      },
+    //    },
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-plugin-snipcartv3',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        apiKey:
+          process.env.CONTEXT === 'production'
+            ? // Production
+              process.env.GATSBY_SNIPCART_APIKEY
+            : // Development
+              process.env.GATSBY_SNIPCART_APIKEY_PREVIEW,
+        currency: 'usd',
+        // Upgrade to latest snipcart
+        js: `https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.js`,
+        styles: `https://cdn.snipcart.com/themes/v3.0.30/default/snipcart.css`,
       },
-      __key: "pages",
+    },
+    'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: './src/pages/',
+      },
+      __key: 'pages',
     },
   ],
 };

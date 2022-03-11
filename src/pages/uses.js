@@ -14,8 +14,10 @@ export default function UsesPage() {
         </p>
         <h2>Hardware</h2>
         <ul>
-
-          <li>🖥️ Desktop: Custom built AMD Ryzen 9 5950X 4th Gen, 64 GB RAM, with a little over 6 TB of storage</li>
+          <li>
+            🖥️ Desktop: Custom built AMD Ryzen 9 5950X 4th Gen, 64GB RAM, with a
+            little over 6TB of storage
+          </li>
           <li>
             💻 Laptop: I switch between a MacBook Pro 2018 and a Surface Book 2
           </li>
@@ -27,14 +29,19 @@ export default function UsesPage() {
         </ul>
         <h2>Software</h2>
         <ul>
-          <li>🔥 Terminal: HyperJS and Windows Terminal</li>
+          <li>
+            🔥 Terminal: Alacritty (Linux) HyperJS (Mac) and Windows Terminal
+            (Windows)
+          </li>
           <li>🧑‍💻 Code Editor: VSCode and NeoVim</li>
           <li>📓 Notetaking: Notion for personal and OneNote for work</li>
         </ul>
         <h2>Office</h2>
         <ul>
           <li>Office Type: Currently working from home</li>
-          <li>Desk: Custom made wood desk</li>
+          <li>
+            Desk: Custom butcher block with the Autonomous SmartDesk frame
+          </li>
         </ul>
         <h2>Other</h2>
         <ul>
