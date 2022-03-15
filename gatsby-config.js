@@ -55,8 +55,8 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) =>
               allMarkdownRemark.nodes.map((node) => ({
                 ...node.frontmatter,
-                url: `${site.siteMetadata.siteUrl}${node.slug}`,
-                guid: `${site.siteMetadata.siteUrl}${node.slug}`,
+                url: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
+                guid: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
               })),
           },
         ],

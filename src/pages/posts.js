@@ -55,7 +55,8 @@ const BlogIndex = ({ data, location }) => {
       <h1>Posts</h1>
       <p>
         My latest articles can be found below. If you want to view posts related
-        to a specific topic, please see <Link to="/tags">tags</Link>.
+        to a specific topic, please see <Link to="/tags">tags</Link>. Subscribe
+        to my RSS feed <a href="https://www.jasonross.dev/rss.xml">here</a>.
       </p>
       <SEO title="Posts" />
       <BlogStyles>
