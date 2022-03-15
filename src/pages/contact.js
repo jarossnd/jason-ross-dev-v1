@@ -73,6 +73,10 @@ const FormContactStyles = styled.div`
   h3 {
     margin: 0px;
   }
+  span.ltrText {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
   @media screen and (max-width: 760px) {
     #contact-form h2 {
       font-size: 2em;
@@ -105,12 +109,20 @@ export default function ContactPage() {
       <SEO title="Contact" />
       <div className="item1">
         <h1>Contact</h1>
+        <h2>Website Issues</h2>
         <p>
-          Feel free to reach out to me regarding any questions or projects. My
-          preferred contact method is e-mail by using the contact form below.
-          However, you can also get in touch with me on the following platforms
-          below.
+          Feel free to open an issue on my{' '}
+          <a
+            href="https://github.com/jarossnd/jason-ross-dev/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub repro
+          </a>{' '}
+          if you have identified an issue on this website.
         </p>
+        <h2>Contact Methods</h2>
+        <p />
       </div>
       <div className="item2" />
       <div className="item3">
@@ -119,13 +131,15 @@ export default function ContactPage() {
           <p>Twitter: @jarossnd</p>
           <p>GitHub: @jarossnd</p>
           <p>Code Pen: @jarossnd</p>
-          <p>Email: Use the contact form on this page</p>
+          <p>
+            Email: <span className="ltrText">ved.ssornosaj@nosaj</span>
+          </p>
         </MyDetailsStyles>
       </div>
       <div className="item4">
+        <h2>Contact Form</h2>
         <FormContactStyles>
           <section id="contact-form">
-            <h3>Contact Form</h3>
             <form
               name="contactForm"
               method="POST"
