@@ -8,8 +8,12 @@ const MyDetailsStyles = styled.div`
   font-size: 3rem;
   text-decoration: none;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 2rem;
   background-color: var(--blue);
+
+  h2 {
+    margin: 0px;
+  }
 `;
 
 const FormContactStyles = styled.div`
@@ -19,8 +23,12 @@ const FormContactStyles = styled.div`
     font-size: 3rem;
     text-decoration: none;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 2rem;
     background-color: var(--blue);
+  }
+
+  h2 {
+    margin: 0px;
   }
   #contact,
   label,
@@ -121,13 +129,12 @@ export default function ContactPage() {
           </a>{' '}
           if you have identified an issue on this website.
         </p>
-        <h2>Contact Methods</h2>
         <p />
       </div>
       <div className="item2" />
       <div className="item3">
         <MyDetailsStyles>
-          <h3>My Details</h3>
+          <h2>My Details</h2>
           <p>Twitter: @jarossnd</p>
           <p>GitHub: @jarossnd</p>
           <p>Code Pen: @jarossnd</p>
@@ -137,9 +144,9 @@ export default function ContactPage() {
         </MyDetailsStyles>
       </div>
       <div className="item4">
-        <h2>Contact Form</h2>
         <FormContactStyles>
           <section id="contact-form">
+            <h2>Contact Form</h2>
             <form
               name="contactForm"
               method="POST"

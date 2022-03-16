@@ -57,6 +57,7 @@ module.exports = {
                 ...node.frontmatter,
                 url: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
                 guid: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
+                custom_element: [{ 'content:encoded': node.html }],
               })),
           },
         ],

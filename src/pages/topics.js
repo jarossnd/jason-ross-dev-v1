@@ -6,12 +6,10 @@ import kebabCase from 'lodash/kebabCase';
 import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
-import SEO from '../components/SEO';
 
 const TopicStyles = styled.div`
   ul {
     list-style-type: none;
-
     -moz-column-count: 3;
     -moz-column-gap: 20px;
     -webkit-column-count: 3;
@@ -22,6 +20,7 @@ const TopicStyles = styled.div`
   ul li {
     padding-left: 30px;
   }
+
   ul li:before {
     margin: 0 0 0 -34px;
     text-align: right;
@@ -30,6 +29,7 @@ const TopicStyles = styled.div`
     position: absolute;
     height: 100%;
   }
+
   h2 {
     margin: 0px;
   }
@@ -82,26 +82,12 @@ const TagsPage = ({
   },
 }) => (
   <>
-    <SEO title="Technology Enthusiast" />
+    <Helmet title={title} />
     <div className="item1">
-      <h1>Welcome</h1>
-      <h2>Hello, my name is Jason 👋</h2>
-      <p>
-        Welcome to my website! I enjoy setting up servers, networking,
-        scripting, programming, and exploring random git repositories on sites
-        such as GitHub or GitLab. I sometimes post videos on my YouTube channel
-        found{' '}
-        <a href="https://www.youtube.com/channel/UCP6Y5xvu8VSyXjFHwGMgc6g">
-          here
-        </a>
-        . However, I am not that good at it but plan on creating more content
-        soon. You will find me creating content around Linux, utilities, servers
-        and occasionally some off topics.
-      </p>
-
+      <h1>Topics</h1>
+      <p>This page contains all the topics I have created blog posts on.</p>
       <TopicStyles>
         <div className="container">
-          <h2>Topics</h2>
           <ul>
             {group.map((tag) => (
               <li key={tag.fieldValue}>

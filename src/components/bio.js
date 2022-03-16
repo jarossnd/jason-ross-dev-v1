@@ -46,9 +46,9 @@ const Bio = () => {
       )}
       {author?.name && (
         <p style={{ textAlign: `center;` }}>
-          ✏️ Written by <strong>{author.name}.</strong>
+          ✏️ Written by <strong>{author.name}. </strong>
+          🪙<a href="/donate"> Donate</a>
           {` `}
-          <a href="/donate">Add to his beer fund here. 🍺</a>
         </p>
       )}
     </div>

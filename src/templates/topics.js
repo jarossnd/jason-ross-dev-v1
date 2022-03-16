@@ -6,12 +6,19 @@ import { Link, graphql } from 'gatsby';
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
+  const tagTitle = `${tag}`;
+  const tagCount = `${totalCount}`;
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? '' : 's'
   } tagged with "${tag}"`;
   return (
     <div className="item1">
-      <h1>{tagHeader}</h1>
+      <h1>Topics</h1>
+      <p>
+        We found <strong>{tagCount}</strong> posts on the topic of{' '}
+        <strong>{tagTitle}</strong>. View posts below or see{' '}
+        <Link to="/topics">All topics</Link>.
+      </p>
       <ul>
         {edges.map(({ node }) => {
           const { slug } = node.fields;
@@ -27,7 +34,6 @@ const Tags = ({ pageContext, data }) => {
               This links to a page that does not yet exist.
               You'll come back to it!
             */}
-      <Link to="/tags">All tags</Link>
     </div>
   );
 };

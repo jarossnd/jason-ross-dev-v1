@@ -32,6 +32,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <hr />
         <footer>
           <p style={{ textAlign: `center;` }}>
+            <Bio />
             🐛 Found a typo or something that needs to be corrected?{' '}
             <a
               href={`https://github.com/jarossnd/jason-ross-dev/tree/main/blog/posts/${post.fields.slug}index.md`}
@@ -39,7 +40,6 @@ const BlogPostTemplate = ({ data, location }) => {
               Edit on GitHub
             </a>
           </p>
-          <Bio />
         </footer>
       </article>
       <nav className="blog-post-nav">

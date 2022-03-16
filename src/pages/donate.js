@@ -6,13 +6,17 @@ import imgBitcoin from '../img/assets/bitcoin.svg';
 import imgPaypal from '../img/assets/paypal.svg';
 
 const DonateStyles = styled.div`
+  h2 {
+    margin: 0px;
+  }
+
   .donate-container {
     border: 3px solid var(--black);
     border-radius: 15px;
     font-size: 3rem;
     text-decoration: none;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 2rem;
     background-color: var(--blue);
   }
 
@@ -28,7 +32,7 @@ const DonateStyles = styled.div`
       font-size: 2rem;
       text-decoration: none;
       margin-bottom: 10px;
-      padding: 10px;
+      padding: 1rem;
       background-color: var(--blue);
     }
   }

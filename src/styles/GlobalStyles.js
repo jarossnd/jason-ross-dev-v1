@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
     a {
         color: var(--yellow);
         text-decoration: none;
+
     }
 
     a:hover {
