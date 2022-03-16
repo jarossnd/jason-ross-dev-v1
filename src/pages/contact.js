@@ -11,6 +11,11 @@ const MyDetailsStyles = styled.div`
   padding: 2rem;
   background-color: var(--blue);
 
+  span.ltrText {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+
   h2 {
     margin: 0px;
   }

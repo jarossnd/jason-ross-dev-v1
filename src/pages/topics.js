@@ -58,7 +58,7 @@ const TopicStyles = styled.div`
       column-count: 2;
     }
     ul li {
-      padding-left: 30px;
+      padding-left: 0px;
       position: unset;
     }
 
