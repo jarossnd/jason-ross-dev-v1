@@ -87,18 +87,15 @@ const TagsPage = ({
       <h1>Welcome</h1>
       <h2>Hello, my name is Jason 👋</h2>
       <p>
-        Welcome to my website! I enjoy setting up servers, networking,
-        scripting, programming, and exploring random git repositories on sites
-        such as GitHub or GitLab. I sometimes post videos on my YouTube channel
-        found{' '}
+        Welcome to my corner on the internet! I talk about technology and other
+        topics on my blog, and you will find other useful pages on this site.
+        Sometimes I post videos on my YouTube channel found{' '}
         <a href="https://www.youtube.com/channel/UCP6Y5xvu8VSyXjFHwGMgc6g">
           here
         </a>
-        . However, I am not that good at it but plan on creating more content
-        soon. You will find me creating content around Linux, utilities, servers
-        and occasionally some off topics.
+        . I typically write about Linux, utilities, servers, web dev, and
+        occasionally some off topics.{' '}
       </p>
-
       <TopicStyles>
         <div className="container">
           <h2>Topics</h2>

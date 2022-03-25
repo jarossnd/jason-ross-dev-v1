@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import styled from 'styled-components';
 import Bio from '../components/bio';
 import SEO from '../components/SEO';
+import Comments from '../components/comments.js';
+
+const CommentStyles = styled.nav``;
 
 const editURL = `https://github.com/jarossnd/jason-ross-dev/tree/master/src/`;
 
@@ -29,6 +33,9 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+        <CommentStyles>
+          <Comments />
+        </CommentStyles>
         <hr />
         <footer>
           <p style={{ textAlign: `center;` }}>
