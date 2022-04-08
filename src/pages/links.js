@@ -109,6 +109,15 @@ export default function ProjectsPage() {
                   Arch AUR
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://larbs.xyz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Larbs
+                </a>
+              </li>
             </ul>
           </div>
         </LinksStyles>
