@@ -117,7 +117,7 @@ HDMI-1 connected 2560x1080+1920+0 (normal left inverted right x axis y axis) 798
 
 There are two issues for me with this output:
 
-1. My `HDMI-1` (LG 34") should be on the left side of `DVI-D-1`
+1. My `HDMI-1` (LG 34") identifier should be on the left side of `DVI-D-1`
 2. The `HDMI-1` monitor should be the primary monitor instead of `DVI-D-1`
 
 Let's fix issue #1 first by setting the correct monitor order:
@@ -133,5 +133,64 @@ xrandr --output HDMI-1 --primary
 ```
 
 If you had a lot of windows open, you might see the windows move since you changed which monitor was the primary.
+
+If you wanted to run both command in one line, it would look like this:
+
+```
+xrandr --output HDMI-1 --primary --left-of DVI-D-1
+```
+
+## Saving the Config
+
+If you were to restart your machine, the xrandr settings you just configured will not be saved. To save these settings, I add the command we built above to my xinitrc file. On my system, my xinitrc file is stored in ~/.config/x11/xinitrc. Here is how I configured it:
+
+Before:
+
+```bash
+#!/bin/sh
+
+# xinitrc runs automatically when you run startx.
+
+# There are some small but important commands that need to be run when we start
+# the graphical environment. There is a link to this file in ~/.xprofile
+# because that file is run automatically if someone uses a display manager
+# (login screen) and so they are needed there. To prevent doubling up commands,
+# I source them here with the line below.
+
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile" ]; then
+	. "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile"
+else
+	. "$HOME/.xprofile"
+fi
+
+ssh-agent dwm
+```
+
+After:
+
+```bash
+#!/bin/sh
+
+# xinitrc runs automatically when you run startx.
+
+# There are some small but important commands that need to be run when we start
+# the graphical environment. There is a link to this file in ~/.xprofile
+# because that file is run automatically if someone uses a display manager
+# (login screen) and so they are needed there. To prevent doubling up commands,
+# I source them here with the line below.
+
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile" ]; then
+	. "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile"
+else
+	. "$HOME/.xprofile"
+fi
+
+xrandr --output HDMI-1 --primary --left-of DVI-D-1
+
+ssh-agent dwm
+```
+
+Since I'm running dwm, it is important that I put the xrandr line above `ssh-agent dwm` otherwise it will not work.
+
 
 That is all you need to do to set the monitor order in Arch Linux.
