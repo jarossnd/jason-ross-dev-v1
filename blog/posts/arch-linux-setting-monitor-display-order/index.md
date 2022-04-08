@@ -126,7 +126,7 @@ Let's fix issue #1 first by setting the correct monitor order:
 xrandr --output HDMI-1 --left-of DVI-D-1
 ```
 
-The monitors should now be in the correct order. Next, lets set the correct primary monitor:
+The monitors should now be in the correct order. Next, let's set the correct primary monitor:
 
 ```
 xrandr --output HDMI-1 --primary
