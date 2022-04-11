@@ -118,6 +118,16 @@ export default function ProjectsPage() {
                   Larbs
                 </a>
               </li>
+              <li>
+                <a
+                  href="              </li>
+                  "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  suckless.org
+                </a>
+              </li>
             </ul>
           </div>
         </LinksStyles>

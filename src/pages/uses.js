@@ -43,7 +43,7 @@ export default function UsesPage() {
         </p>
         <UsesStyles>
           <div className="container">
-            <h2>Hardware</h2>
+            <h2>Hardware (Personal)</h2>
             <ul>
               <li>
                 🖥️ Desktop: Custom built AMD Ryzen 9 5950X 4th Gen, 64GB RAM,
@@ -58,22 +58,36 @@ export default function UsesPage() {
             </ul>
           </div>
           <div className="container">
+            <h2>Hardware (Work)</h2>
+            <ul>
+              <li>💻 Laptop: Surfice Book Pro 2</li>
+              <li>🖥️ 2 HP - 27" IPS LED Monitors</li>
+              <li>🖱️ Mouse: Logitech - MX Master 3</li>
+              <li>
+                ⌨️ Keyboard: Logitech - G815 (Same as the G915 except not
+                wireless)
+              </li>
+            </ul>
+          </div>
+          <div className="container">
             <h2>Software</h2>
             <ul>
               <li>
                 🔥 Terminal: Alacritty (Linux) HyperJS (Mac) and Windows
-                Terminal (Windows)
+                Terminal Preview(Windows)
               </li>
               <li>🧑‍💻 Code Editor: VSCode and NeoVim</li>
               <li>📓 Notetaking: Notion for personal and OneNote for work</li>
-            </ul>
-          </div>
-          <div className="container">
-            <h2>Office</h2>
-            <ul>
-              <li>Office Type: Currently working from home</li>
               <li>
-                Desk: Custom butcher block with the Autonomous SmartDesk frame
+                📸 Screen Capture on Windows:{' '}
+                <a
+                  href="https://getsharex.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ShareX
+                </a>{' '}
+                which is free and open source
               </li>
             </ul>
           </div>
@@ -83,6 +97,10 @@ export default function UsesPage() {
               <li>☕ Coffee: Folgers</li>
               <li>📔 Notebook: Moleskine</li>
               <li>🛻 Vehicle: RAM 1500 Pickup</li>
+              <li>
+                🗃️ Desk: Custom butcher block with the Autonomous SmartDesk
+                frame
+              </li>
               <li>🧻 Toiletpaper: Hey now, that is a weird question!</li>
             </ul>
           </div>

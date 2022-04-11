@@ -1,7 +1,7 @@
 ---
-title: Authenticating to Github in the Terminal in Arch Linux
+title: Authenticating to GitHub in the Terminal in Arch Linux
 date: "2022-04-07T00:00:00.000Z"
-description: "How to authenticate to Github in the Terminal in Arch Linux so you can make changes to your private repos!"
+description: "How to authenticate to GitHub in the Terminal in Arch Linux so you can make changes to your private repos!"
 tags: ["git", "linux", "linux-config"]
 ---
 

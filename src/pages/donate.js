@@ -60,7 +60,7 @@ export default function DonatePage() {
 
             <p>Donate using Monero XMR using the following:</p>
             <p className="crypto-string">
-              8BdJhzfMn1BfwF8gNxFoS4DBv3HtwNzGBNAmLFaJHmcv6Tt7vuwVb8Y9z7v9oogFskFx4wPWiUcQw9CmmHURzwi3JP6xDLG
+              866SH9C1HcbMo7MLkUss4jAEEzv52gfFna4D6ATRhKqzd9tJrDGgFD3h8sMuF3K51dFK7LHtaEq7Kgud9c6JaHE5AqwKRtZ
             </p>
           </div>
           <div className="donate-container">
