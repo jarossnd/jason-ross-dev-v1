@@ -14,8 +14,8 @@ After 2 years of working from home, my place of work has finally fully opened ag
 5. Not everyone is back in the office yet so it is very quiet.
 6. I have been able to talk to a few folks that I haven't seen or heard from for two years
 
-It has been good going back into the office because now I actually take the time and fully get ready for work instead of procrastinating and syaing "I will just shower this afternoon" (just as an example) or whatever the excuse is.
+It has been good going back into the office because now I actually take the time and fully get ready for work instead of procrastinating and saying "I will just shower this afternoon" (just as an example) or whatever the excuse is.
 
 I no longer have to wait for the coffee pot to make coffee since we have fancy coffee machines at work. Also, the coffee is free at work!
 
-Since my home office setup put my office setup to shame, I went out and upgraded my work monitors, keyboard, and mouse. I purchased the same keyboard and mouse that I use at home for work so seemlessly go back and forther and not noice a typing differene.
+Since my home office setup put my office setup to shame, I went out and upgraded my work monitors, keyboard, and mouse. I purchased the same keyboard and mouse that I use at home for work so seamlessly go back and forth and not notice a typing difference.
