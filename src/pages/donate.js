@@ -57,7 +57,6 @@ export default function DonatePage() {
               <img src={imgXmr} alt="XMR Icon" width="30" height="30" />
               &nbsp;Monero
             </h2>
-
             <p>Donate using Monero XMR using the following:</p>
             <p className="crypto-string">
               866SH9C1HcbMo7MLkUss4jAEEzv52gfFna4D6ATRhKqzd9tJrDGgFD3h8sMuF3K51dFK7LHtaEq7Kgud9c6JaHE5AqwKRtZ
@@ -68,7 +67,10 @@ export default function DonatePage() {
               <img src={imgBitcoin} alt="XMR Icon" width="30" height="30" />
               &nbsp;BitCoin
             </h2>
-            <p>Coming soon...</p>
+            <p>Donate using Bitcoin BTC using the following:</p>
+            <p className="crypto-string">
+              bc1qtew9qam62c9l4v32alvqehdw79jxly3dsk9w8p
+            </p>
           </div>
           <div className="donate-container">
             <h2>

@@ -120,8 +120,7 @@ export default function ProjectsPage() {
               </li>
               <li>
                 <a
-                  href="              </li>
-                  "
+                  href="https://suckless.org"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
