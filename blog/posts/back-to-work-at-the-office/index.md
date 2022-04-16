@@ -1,7 +1,7 @@
 ---
 title: I'm back to work at the office
 date: "2022-04-11T00:00:00.000Z"
-description: "Setting the monitor display order in Arch Linux using Xrandr for a multi-monitor set"
+description: "A quick update about going back to work at the office."
 tags: ["work"]
 ---
 
