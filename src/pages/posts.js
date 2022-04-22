@@ -15,8 +15,8 @@ const PostStyles = styled.div`
   border-radius: 15px;
   font-size: 3rem;
   text-decoration: none;
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-bottom: 2rem;
+  padding: 2rem;
   background-color: var(--blue);
   h3 {
     margin: 0px;

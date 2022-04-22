@@ -7,6 +7,10 @@ const UsesStyles = styled.div`
     margin: 0px;
   }
 
+  ul {
+    list-style-type: none;
+  }
+
   .container {
     border: 3px solid var(--black);
     border-radius: 15px;
@@ -26,6 +30,14 @@ const UsesStyles = styled.div`
       margin-bottom: 10px;
       padding: 1rem;
       background-color: var(--blue);
+    }
+    ul {
+      padding-left: 2rem;
+    }
+
+    ul li {
+      padding-left: 0px;
+      position: unset;
     }
   }
 `;
