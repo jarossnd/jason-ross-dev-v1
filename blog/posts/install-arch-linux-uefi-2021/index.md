@@ -1,6 +1,6 @@
 ---
 title: Installing Arch Linux with UEFI 2021
-date: "2021-04-16T00:00:00.000Z"
+date: "2021-04-16"
 description: "I am going to walk you through installing Arch Linux with UEFI from beginning to end!"
 tags: ['linux']
 ---

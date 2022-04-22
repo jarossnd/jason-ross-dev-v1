@@ -1,6 +1,6 @@
 ---
 title: Configure the Windows Terminal have a Transparent Background
-date: "2022-01-22T00:00:00.000Z"
+date: "2022-01-22"
 description: "I show you how to configure the Windows Terminal so you can have a transparent background to make you feel like a l33t h3cks0r"
 tags: ["powershell", "windows terminal"]
 ---

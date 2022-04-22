@@ -50,6 +50,25 @@ const LinksStyles = styled.div`
       padding: 1rem;
       background-color: var(--blue);
     }
+    ul {
+      column-count: 3;
+      padding-left: 2rem;
+    }
+
+    ul li {
+      padding-left: 0px;
+      position: unset;
+    }
+
+    ul li:before {
+      margin: 0 0 0 -34px;
+      text-align: right;
+      width: 2em;
+      display: inline-block;
+      position: absolute;
+      height: 100%;
+    }
+  }
   }
 `;
 

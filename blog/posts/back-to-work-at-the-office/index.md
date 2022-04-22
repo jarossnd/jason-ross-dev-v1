@@ -1,6 +1,6 @@
 ---
 title: I'm back to work at the office
-date: "2022-04-11T00:00:00.000Z"
+date: "2022-04-11"
 description: "A quick update about going back to work at the office."
 tags: ["work"]
 ---

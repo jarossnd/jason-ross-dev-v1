@@ -56,6 +56,7 @@ const TopicStyles = styled.div`
     }
     ul {
       column-count: 2;
+      padding-left: 2rem;
     }
     ul li {
       padding-left: 0px;

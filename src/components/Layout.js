@@ -63,6 +63,10 @@ const ContentStyles = styled.div`
         font-size: 3rem;
     }
 
+    ol li {
+        font-size: 3rem;
+    }
+
     @media screen and (max-width: 760px) {
         h1 {
         font-size: 4rem;
@@ -85,6 +89,10 @@ const ContentStyles = styled.div`
     }
 
     ul li {
+        font-size: 2rem;
+    }
+
+    ol li {
         font-size: 2rem;
     }
 

@@ -1,6 +1,6 @@
 ---
 title: The main() function in C programming
-date: "2022-03-31T00:00:00.000Z"
+date: "2022-03-31"
 description: "What is the main() function in the c programming language?"
 tags: ['c programming']
 ---

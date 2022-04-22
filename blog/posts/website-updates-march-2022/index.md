@@ -1,6 +1,6 @@
 ---
 title: Website Updates March 2022
-date: "2022-03-15T00:00:00.000Z"
+date: "2022-03-15"
 description: "Latest updates and changes on www.jasonross.dev"
 tags: ['website updates']
 ---

@@ -1,6 +1,6 @@
 ---
 title: Turning old VHS tapes to digital
-date: "2022-03-11T00:00:00.000Z"
+date: "2022-03-11"
 description: "Quick update on what I have been doing with old VHS tapes!"
 tags: ['VHS']
 ---
