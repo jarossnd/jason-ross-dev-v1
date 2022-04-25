@@ -24,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
         line-height: 1.5;
         padding-right: 2rem;
         padding-left: 2rem;
+        overflow-y: scroll;
     }
 
     a {

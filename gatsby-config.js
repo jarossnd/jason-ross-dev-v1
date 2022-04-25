@@ -2,6 +2,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const siteUrl = process.env.URL || `https://www.jasonross.dev`;
+
 module.exports = {
   siteMetadata: {
     author: {
@@ -68,6 +70,58 @@ module.exports = {
       options: {
         path: `${__dirname}/blog/posts`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+      {
+        allSitePage {
+          nodes {
+            path
+          }
+        }
+        allWpContentNode(filter: {nodeType: {in: ["Post", "Page"]}}) {
+          nodes {
+            ... on WpPost {
+              uri
+              modifiedGmt
+            }
+            ... on WpPage {
+              uri
+              modifiedGmt
+            }
+          }
+        }
+      }
+    `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+          allWpContentNode: { nodes: allWpNodes },
+        }) => {
+          const wpNodeMap = allWpNodes.reduce((acc, node) => {
+            const { uri } = node;
+            acc[uri] = node;
+
+            return acc;
+          }, {});
+
+          return allPages.map((page) => ({ ...page, ...wpNodeMap[page.path] }));
+        },
+        serialize: ({ path, modifiedGmt }) => ({
+          url: path,
+          lastmod: modifiedGmt,
+        }),
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.jasonross.dev',
+        sitemap: 'https://www.jasonross.dev/sitemap/sitemap-index.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
     {
