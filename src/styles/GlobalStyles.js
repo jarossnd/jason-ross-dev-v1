@@ -62,6 +62,7 @@ const GlobalStyles = createGlobalStyle`
         body {
             padding-right: 2rem;
             padding-left: 2rem;
+        }
     }
 `;
 
