@@ -49,7 +49,7 @@ export default function UsesPage() {
       <div className="item1">
         <h1>Uses</h1>
         <p>
-          I often get asked what type of hardware or software I use and I keep
+          I often get asked what type of software and hardware I use so I keep
           track of it all on this page. I change this up often so check back for
           regular updates.
         </p>
