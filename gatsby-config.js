@@ -11,7 +11,7 @@ module.exports = {
       summary: `who creates technology videos and enjoys helping others.`,
     },
     title: `Jason Ross`,
-    description: `The homepage of web developer and technology anthusiast Jason Ross. We discuss everything having to do with technology and there are no limits!`,
+    description: `The homepage of web developer and technology enthusiast Jason Ross. We discuss everything having to do with technology and there are no limits!`,
     siteUrl: `https://www.jasonross.dev`,
     twitter: `@jarossnd`,
     social: {

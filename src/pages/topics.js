@@ -6,6 +6,7 @@ import kebabCase from 'lodash/kebabCase';
 import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
+import SEO from '../components/SEO';
 
 const TopicStyles = styled.div`
   ul {
@@ -83,7 +84,7 @@ const TagsPage = ({
   },
 }) => (
   <>
-    <Helmet title={title} />
+    <SEO title="Topics" />
     <div className="item1">
       <h1>Topics</h1>
       <p>This page contains all the topics I have created blog posts on.</p>

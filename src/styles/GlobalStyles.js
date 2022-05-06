@@ -10,6 +10,8 @@ const GlobalStyles = createGlobalStyle`
         --dark: #202030;
         --blue: #0E0F19;
         --orange: #FE7F2D;
+        --purple: #C04ABC;
+        --green: #639A88;
     }
 
     html {

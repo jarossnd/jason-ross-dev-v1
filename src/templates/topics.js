@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 // Components
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
+import SEO from '../components/SEO';
 
 const BlogStyles = styled.div`
   ol {
@@ -42,43 +43,46 @@ const Tags = ({ pageContext, data }) => {
     totalCount === 1 ? '' : 's'
   } tagged with "${tag}"`;
   return (
-    <div className="item1">
-      <h1>Topics: {tagTitle}</h1>
-      <p>
-        We found <strong>{tagCount}</strong> posts on the topic of{' '}
-        <strong>{tagTitle}</strong>. View posts below or see{' '}
-        <Link to="/topics">all topics</Link>.
-      </p>
-      <BlogStyles>
-        <div className="container">
-          <ol style={{ listStyle: `none` }}>
-            {edges.map(({ node }) => {
-              const { slug } = node.fields;
-              const { title } = node.frontmatter;
-              const { date } = node.frontmatter;
-              const { description } = node.frontmatter;
-              return (
-                <TopicStyles>
-                  <li key={slug}>
-                    <h2>
-                      <Link to={slug}>{title}</Link>
-                    </h2>
-                    <p>{date}</p>
-                    <section>
-                      <p>{description}</p>
-                    </section>
-                  </li>
-                </TopicStyles>
-              );
-            })}
-          </ol>
-        </div>
-      </BlogStyles>
-      {/*
+    <>
+      <SEO title={tagTitle} />
+      <div className="item1">
+        <h1>Topics: {tagTitle}</h1>
+        <p>
+          We found <strong>{tagCount}</strong> posts on the topic of{' '}
+          <strong>{tagTitle}</strong>. View posts below or see{' '}
+          <Link to="/topics">all topics</Link>.
+        </p>
+        <BlogStyles>
+          <div className="container">
+            <ol style={{ listStyle: `none` }}>
+              {edges.map(({ node }) => {
+                const { slug } = node.fields;
+                const { title } = node.frontmatter;
+                const { date } = node.frontmatter;
+                const { description } = node.frontmatter;
+                return (
+                  <TopicStyles>
+                    <li key={slug}>
+                      <h2>
+                        <Link to={slug}>{title}</Link>
+                      </h2>
+                      <p>{date}</p>
+                      <section>
+                        <p>{description}</p>
+                      </section>
+                    </li>
+                  </TopicStyles>
+                );
+              })}
+            </ol>
+          </div>
+        </BlogStyles>
+        {/*
               This links to a page that does not yet exist.
               You'll come back to it!
             */}
-    </div>
+      </div>
+    </>
   );
 };
 Tags.propTypes = {
