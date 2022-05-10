@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import SEO from '../components/SEO';
 
 const UsesStyles = styled.div`
@@ -72,7 +73,7 @@ export default function UsesPage() {
           <div className="container">
             <h2>Hardware (Work)</h2>
             <ul>
-              <li>💻 Laptop: Surfice Book Pro 2</li>
+              <li>💻 Laptop: Surface Book Pro 2</li>
               <li>🖥️ 2 HP - 27" IPS LED Monitors</li>
               <li>🖱️ Mouse: Logitech - MX Master 3</li>
               <li>
@@ -88,8 +89,14 @@ export default function UsesPage() {
                 🔥 Terminal: Alacritty (Linux) HyperJS (Mac) and Windows
                 Terminal Preview(Windows)
               </li>
-              <li>🧑‍💻 Code Editor: VSCode and NeoVim</li>
-              <li>📓 Notetaking: Notion for personal and OneNote for work</li>
+              <li>
+                🧑‍💻 Code Editor: VSCode (
+                <Link to="https://www.jasonross.dev/jason-s-vs-code-config-2022/">
+                  config
+                </Link>
+                ) and NeoVim
+              </li>
+              <li>📓 Note-taking: Notion for personal and OneNote for work</li>
               <li>
                 📸 Screen Capture on Windows:{' '}
                 <a
