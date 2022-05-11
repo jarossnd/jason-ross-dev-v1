@@ -35,26 +35,33 @@ For those that live in PowerShell, this option typically works best because you 
 
 3. The next time you open PowerShell, the SharePoint Online Management Shell cmdlets should be available for use. If not, you can always import the module by running the following:
 
-`Import-Module Microsoft.Online.SharePoint.PowerShell`
+```PowerShell
+Import-Module Microsoft.Online.SharePoint.PowerShell
+```
 
 ## Finding Cmdlets
 
 You can find a list of cmdlets on the [Microsoft Docs cmdlet reference](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/?view=sharepoint-ps) page. You can also run `Get-Command` to see a list of available cmdlets in PowerShell:
 
-`Get-Command -Module Microsoft.Online.SharePoint.PowerShell`
+```PowerShell
+Get-Command -Module Microsoft.Online.SharePoint.PowerShell
+```
 
 ## Connecting to your tenant
 
 Use the `Connect-SPOService` cmdlet to connect to your tenant. Also, you must connect to the `-admin` SharePoint Online Admin URL. See below for an example:
 
-`Connect-SPOService -Url https://<YOURTENANT>-admin.sharepoint.com`
-
+```PowerShell
+Connect-SPOService -Url https://<YOURTENANT>-admin.sharepoint.com
+```
 
 ## Logging into a Government GCC High or DoD tenant
 
 Use the `Connect-SPOService` cmdlet to connect to your government tenant. Also, you must connect to the `-admin` SharePoint Online Admin URL. Use  `-Region ITAR` to indicate that you want to login with a Government endpoint. See below for an example:
 
-`Connect-SPOService -Url https://<YOURTENANT>-admin.sharepoint.us -Region ITAR`
+```PowerShell
+Connect-SPOService -Url https://<YOURTENANT>-admin.sharepoint.us -Region ITAR
+```
 
 ## Issues 🤯
 

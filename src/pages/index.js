@@ -55,8 +55,8 @@ const TopicStyles = styled.div`
       background-color: var(--blue);
     }
     ul {
-      column-count: 2;
-      padding-left: 2rem;
+      column-count: 1;
+      text-align: center;
     }
 
     ul li {

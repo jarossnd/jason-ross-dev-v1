@@ -97,8 +97,8 @@ const ContentStyles = styled.div`
     }
 
     @media screen and (max-width: 760px) {
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
 
 `;

@@ -62,8 +62,8 @@ const GlobalStyles = createGlobalStyle`
     }
     @media screen and (max-width: 760px) {
         body {
-            padding-right: 2rem;
-            padding-left: 2rem;
+            padding-right: 1rem;
+            padding-left: 1rem;
         }
     }
 `;
