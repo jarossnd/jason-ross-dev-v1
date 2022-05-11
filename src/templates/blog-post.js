@@ -6,6 +6,11 @@ import SEO from '../components/SEO';
 import Comments from '../components/comments.js';
 
 const CommentStyles = styled.nav``;
+const PostStyles = styled.nav`
+  h2 {
+    text-align: center;
+  }
+`;
 
 const editURL = `https://github.com/jarossnd/jason-ross-dev/tree/master/src/`;
 
@@ -29,10 +34,12 @@ const BlogPostTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>Post Date: {post.frontmatter.date}</p>
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <PostStyles>
+          <section
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            itemProp="articleBody"
+          />
+        </PostStyles>
         <CommentStyles>
           <Comments />
         </CommentStyles>
@@ -49,7 +56,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </p>
         </footer>
       </article>
-      <nav className="blog-post-nav">
+      {/* <nav className="blog-post-nav">
         <ul
           style={{
             display: `flex`,
@@ -74,7 +81,7 @@ const BlogPostTemplate = ({ data, location }) => {
             )}
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </div>
   );
 };

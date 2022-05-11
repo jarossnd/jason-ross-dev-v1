@@ -91,10 +91,8 @@ export default function UsesPage() {
               </li>
               <li>
                 🧑‍💻 Code Editor: VSCode (
-                <Link to="https://www.jasonross.dev/jason-s-vs-code-config-2022/">
-                  config
-                </Link>
-                ) and NeoVim
+                <Link to="/jason-s-vs-code-config-2022/">config</Link>) and
+                NeoVim (<Link to="/neovim-setup-on-windows-2022/">config</Link>)
               </li>
               <li>📓 Note-taking: Notion for personal and OneNote for work</li>
               <li>
