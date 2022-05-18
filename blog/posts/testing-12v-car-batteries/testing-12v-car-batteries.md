@@ -7,6 +7,8 @@ tags: ['automotive', 'batteries', 'multimeter']
 
 ## Overview
 
+This is a quick, straight to the point, article on how to test 12 volt car batteries with a Klein Tools digital mm700 auto-ranging multimeter.
+
 ## State of Charge
 
 1. Plug the <font color="gray">Black</font> terminal into the "COM" jack
@@ -14,7 +16,7 @@ tags: ['automotive', 'batteries', 'multimeter']
 3. Connect terminals to car battery:
    - Negative battery post = <font color="gray">Black</font> terminal wire
    - Positive battery post = <font color="red">Red</font> terminal wire
-4. Turn multi-meter on by setting to: (AC/DC Volts)
+4. Turn multimeter on by setting to: (AC/DC Volts)
    - Press the RANGE button until you get to the hundredth place
    - Press the SEL button until you get to: DC
 5. Get current reading without the car turned on to find the state of the battery and compare to the state of charge chart
@@ -26,11 +28,11 @@ tags: ['automotive', 'batteries', 'multimeter']
 3. Connect terminals to car battery:
    - Negative battery post = <font color="gray">Black</font> terminal wire
    - Positive battery post = <font color="red">Red</font> terminal wire
-4. Turn multi-meter on by setting to: (AC/DC Volts)
+4. Turn multimeter on by setting to: (AC/DC Volts)
    - Press the RANGE button until you get to the hundredth place
    - Press the SEL button until you get to: DC
 5. Get current reading without the car turned on to find the state of the battery and compare to the state of charge chart
-6. Turn car Headlights on for 2 minutes (to get rid of surface charge) and take another test:
+6. Turn car Headlights on for 2 minutes (to get rid of surface charge) and take another test
 7. Hit the MAX/MIN button until MIN is on the screen and start the vehicle
 8. Hit the HOLD button so we don’t lose the MIN value
 9. Turn car off
