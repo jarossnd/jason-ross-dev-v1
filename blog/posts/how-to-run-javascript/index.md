@@ -89,3 +89,21 @@ Save the file and open it in your browser. Click the "Click Me!" button which wi
 ## JavaScript Browser Console
 
 ## Using NodeJS
+
+You can run JavaScript from a terminal using NodeJS. You must have NodeJS installed on your machine. You can get NodeJS from https://nodejs.org. NodeJS is for developing server-side applications. To run JavaScript after you have installed NodeJS, open a terminal and type node:
+
+```text
+PS C:\Users\JasonRoss> node
+Welcome to Node.js v16.14.2.
+Type ".help" for more information.
+>
+```
+
+```text
+PS C:\Users\JasonRoss> node
+Welcome to Node.js v16.14.2.
+Type ".help" for more information.
+> 1+1
+2
+>
+```

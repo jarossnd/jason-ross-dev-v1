@@ -13,7 +13,7 @@ Variables are a fundamental concept in JavaScript. Variables hold types of infor
 
 ### Using var and let
 
-There are 3 ways to declare a variable in JavaScript using the keywords of var, let, and const. All 3 keywords will allow you to store data in a variable. I will cover `const` the differences between the 3 later in this post. For now, we will use `var` and `let`. To declare a variable, you use the keyword plus the name that you want to call the variable. Below is an example using `var` and `let`:
+There are 3 ways to declare a variable in JavaScript using the keywords of var, let, and const. All 3 keywords will allow you to store data in a variable. I will cover `const` and the differences between the 3 later in this post. For now, we will use `var` and `let`. To declare a variable, you use the keyword plus the name that you want to call the variable. Below is an example using both `var` and `let`:
 
 ```JavaScript
 var name;
@@ -22,34 +22,9 @@ let age;
 
 > In JavaScript, we use a semi-colon ( ; ) to tell the JavaScript interpreter that we are done with our statement.
 
-Variable names can contain letters, numbers, and `$` or `_`. However, variables cannot start with a number or contain spaces.
+Variable names can contain letters, numbers, and `$` or `_`. However, variables cannot start with a number or contain spaces. It is also best practice to not start a variable with a capital letter. We use capitals in classes so we don't want to use capitals in variables.
 
-If you were to type `name` (the variable we just declared above using the var keyword) or call upon `name` within some JavaScript code, it would return `undefined` because we have not set a value yet. Let us initialize our variable in the next section
-
-### Using Constants
-
-The third variable keyword is `const` which stands for constants. `const` works like `var` and `let` with the following exceptions:
-
-- you have to initialize the variable (assigning a value) when they are declared
-- you cannot assign a `const` variable a new value after it has been initialized
-
-Here is an example on how to declare and initialize a constant variable using the `const` keyword:
-
-```JavaScript
-const alive = true;
-```
-
-If I try change alive to equal false, I will receive an error:
-
-```JavaScript
-alive = false;
-```
-
-The error will saying something like this:
-
-```Text
-Uncaught TypeError: Assignment to constant variable.
-```
+If you were to type `name` (the variable we just declared above using the var keyword) or call upon `name` within some JavaScript code, it would return `undefined` because we have not set a value yet. Let us initialize our variable in the next section.
 
 ## Initializing Variables
 
@@ -79,13 +54,49 @@ total
 
 ## var
 
-var is the older and no longer recommended way to declare a variable. In earlier versions of JavaScript, you could only declare a variable using var. var had some issues and eventually let and const were added to the language. var has been kept in the language for backwards compatibility reasons.
+var has been around since the beginning of JavaScript, back before let and const where a thing. var variables are function scoped whereas let and const are block scoped.
+
+var variables can be updated with a new value. For example, I can change the value of first from jason to ross as seen below:
+
+```JavaScript
+var first = ‘jason’;
+first = ‘ross’;
+```
+
+var is the older and no longer recommended way to declare a variable. In earlier versions of JavaScript, you could only declare a variable using var. var had some issues and eventually `let` and `const` were added to the language. var has been kept in the language for backwards compatibility reasons.
 
 ## let
 
+let came out in ES6 and they are block scoped variables. You can update the value of a let to something else. For example, I can change the value of first from jason to ross as seen below:
+
+```JavaScript
+let first = ‘jason’;
+first = ‘ross’;
+```
+
+`let` variables are block scoped variables just like `const`.
+
 ## const
 
-We covered `const` briefly already but const stands for constant. The value of a constant cannot be changed once it has been declared and initialized. Again, a `const` is a variable like var and let with the following exceptions:
+The third variable keyword is `const` which stands for constant. const came out in ES6 and are blocked scoped variables. `const` works like `var` and `let` with the following exceptions:
 
 - you have to initialize the variable (assigning a value) when they are declared
 - you cannot assign a `const` variable a new value after it has been initialized
+
+Here is an example on how to declare and initialize a constant variable using the `const` keyword:
+
+```JavaScript
+const alive = true;
+```
+
+If I try change alive to equal false, I will receive an error:
+
+```JavaScript
+alive = false;
+```
+
+The error will saying something like this:
+
+```Text
+Uncaught TypeError: Assignment to constant variable.
+```
