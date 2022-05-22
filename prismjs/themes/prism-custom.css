@@ -108,7 +108,7 @@ code[class*="language-"] ::selection {
 .token.boolean,
 .token.number,
 .token.deleted {
-    color: var(--orange);
+    color: #81D4FA;
     /* #CF6A4C */
 }
 
@@ -133,7 +133,7 @@ code[class*="language-"] ::selection {
 .style .token.string,
 .token.variable,
 .token.inserted {
-    color: var(--purple);
+    color: #4CAF50;
     /* #8F9D6A */
 }
 
