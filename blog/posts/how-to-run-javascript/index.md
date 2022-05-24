@@ -7,14 +7,16 @@ tags: ['javascript']
 
 ## Overview
 
-In this article I am going to talk about 4 ways to run JavaScript for those who are new at JavaScript and want to learn. Below are the 3 methods I am going to touch on:
+In this article I am going to talk about 4 ways to execute JavaScript using 2 diferent hosts, the browser and Node.JS. Below are the 4 methods I am going to touch on. Methods 1-3 all use the web browser as a host with a built in JavaScript interpreter. This was the original way to run JavaScript when it first became a language.
+
+The 4th method uses another host environment to execute JavaScript called Node.js which allows you to have access to the operating system and are not limited to just the browser.
 
 1. JavaScript embedded in an HTML page
 2. JavaScript in an external file
 3. Browser Console JavaScript Interpreter
-4. Using NodeJS
+4. Using Node.js
 
-The first 2 methods are going to be for front end JavaScript development. The 3rd method is going to be for debugging / testing JavaScript quickly in the browser. The 4th is server-side JavaScript using NodeJS.
+The first 2 methods are going to be for front end JavaScript development. The 3rd method is going to be for debugging / testing JavaScript quickly in the browser. The 4th is server-side JavaScript using Node.js.
 
 ## Embedded in a HTML Page
 
@@ -90,7 +92,7 @@ Save the file and open it in your browser. Click the "Click Me!" button which wi
 
 ## Using NodeJS
 
-You can run JavaScript from a terminal using NodeJS. You must have NodeJS installed on your machine. You can get NodeJS from https://nodejs.org. NodeJS is for developing server-side applications. To run JavaScript after you have installed NodeJS, open a terminal and type node:
+Node.js was created in 2009 and it comes with a CLI (command line interface) where you can run JavaScript from a terminal. You can directly input JavaScript in the terminal or pass an external file with JavaScript code. You must have Node.js installed on your machine. You can get Node.js from https://nodejs.org. Node.js is for developing server-side applications and running utility scripts. To run JavaScript after you have installed Node.js, open a terminal and type node:
 
 ```text
 PS C:\Users\JasonRoss> node
