@@ -88,7 +88,37 @@ Save the file and open it in your browser. Click the "Click Me!" button which wi
 
 ## HTML JavaScript External File
 
+index.html:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript External File</title>
+</head>
+<body>
+    <h1>JavaScript External File</h1>
+    <p id="myParagraph">Old paragraph...</p>
+    <button type="button" onclick="myFunction()">Update</button>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+script.js:
+
+```javascript
+function myFunction() {
+    document.getElementById("myParagraph").innerHTML = "New paragraph...";
+  }
+```
+
 ## JavaScript Browser Console
+
+Another way to run JavaScript is through your browser JavaScript interpreter in the web deverloper tools. To access the web developer tools, you can typically press F12 or Control-Shift-I (On MacOS: Command-Option-I) and select the console tab.
 
 ## Using NodeJS
 
