@@ -75,7 +75,6 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.jasonross.dev',
         sitemap: 'https://www.jasonross.dev/sitemap/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
