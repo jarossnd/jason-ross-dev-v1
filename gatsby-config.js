@@ -73,13 +73,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        sitemap: 'https://www.jasonross.dev/sitemap/sitemap-index.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/blog/assets`,
