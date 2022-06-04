@@ -1,12 +1,11 @@
 ---
-title: Updating your Arch Keywring
+title: Updating your Arch Keyring
 date: "2022-06-04"
-description: "I went to update my Arch system today but received errors. The solution was to update the Arch Keywring.
+description: "I went to update my Arch system today but received errors. The solution was to update the Arch keyring."
 tags: ["linux"]
 ---
 
 I went to update an Arch based system today that was several months outdated. I received the following after running `sudo pacman -Syu`:
-
 
 ```
 (237/237) checking keys in keyring
@@ -42,7 +41,7 @@ Errors occurred, no packages were upgraded.
 
 The solution to this problem is to update `archlinux-keyring`:
 
-```
+```bash
 sudo pacman -S archlinux-keyring
 ```
 
